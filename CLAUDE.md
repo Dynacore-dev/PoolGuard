@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that controls a pool's filter pump plus two dosing pumps (pH, chlorine) on a schedule, exposes a small web dashboard, and reads water temperature from a DS18B20 sensor.
 
+## Setup
+
+`src/Config.h` is gitignored (it holds real WiFi credentials) and must exist locally before building: copy `src/Config.example.h` to `src/Config.h` and fill in `Config::WIFI_SSID`/`WIFI_PASSWORD`. `pio run` will fail with `fatal error: Config.h: No such file or directory` if it's missing.
+
 ## Commands
 
 - Build: `pio run`
