@@ -1,0 +1,46 @@
+#ifndef POOL_TIME_HPP
+#define POOL_TIME_HPP
+
+#include <Arduino.h>
+#include <WiFi.h>
+#include "time.h"
+
+class DailyTimeSync {
+private:
+  const char* _ntpServer;
+  const char* _timezone;
+  unsigned long _lastSyncMillis;
+  const unsigned long _syncInterval = 24 * 60 * 60 * 1000;
+
+public:
+  DailyTimeSync(const char* server = "pool.ntp.org",
+                const char* tz = "CET-1CEST,M3.5.0,M10.5.0/3");
+
+  void begin();
+  void sync();
+  void updateIfNeeded();
+
+  // Einzelne Zeitwerte abfragen
+  int getHour();
+  int getMinute();
+  int getSecond();
+
+  String getFormattedTime();
+};
+
+class PoolPumpTime {
+private:
+
+public:
+
+  bool checkPoolpumpTime(int switchTimeOnHour1, int switchTimeOffHour1, int switchTimeOnHour2,
+                         int switchTimeOffHour2, int switchTimeOnHour3, int switchTimeOffHour3);
+
+  bool checkPHpumpTime(int switchTimeOnHour, int switchTimeOffHour, int switchTimeOnMinute,
+                       int switchTimeOffMinute, int switchTimeOnSec, int switchTimeOffSec);
+
+  bool check_Chlor_pump_status(int switchTimeOnHour, int switchTimeOffHour, int switchTimeOnMinute,
+                               int switchTimeOffMinute, int switchTimeOnSec, int switchTimeOffSec);
+};
+
+#endif
