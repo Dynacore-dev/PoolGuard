@@ -60,10 +60,10 @@ void ServerManager::begin(DailyTimeSync *ts) {
     html += "</script></head><body onload='update()'>";
 
     if(isPoolpumpActiv){
-      html += "<h1 id='head'>Pool Steuerung</h1><div id='time'>--:--:--</div>";
+      html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
       html += "<div id='temp'> Wassertemperatur: "+String(tempSensor.getLatestTemperature()) +"°C";
     }
-    else html += "<h1 id='head'>Pool Steuerung</h1><div id='time'>--:--:--</div>";
+    else html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
 
 
     auto createBox = [&](String id, String label, Device &d, int doseSec = 0) {

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that controls a pool's filter pump plus two dosing pumps (pH, chlorine) on a schedule, exposes a small web dashboard, and reads water temperature from a DS18B20 sensor.
+PoolGuard is PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that controls a pool's filter pump plus two dosing pumps (pH, chlorine) on a schedule, exposes a small web dashboard, and reads water temperature from a DS18B20 sensor.
 
 ## Setup
 
@@ -14,7 +14,7 @@ PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that controls a pool
 
 - Build: `pio run`
 - Upload to a connected board: `pio run -t upload`
-- Serial monitor: `pio device monitor` (baud 115200, set in `Poolsteuerung.ino`)
+- Serial monitor: `pio device monitor` (baud 115200, set in `PoolGuard.ino`)
 - Clean build artifacts: `pio run -t clean`
 
 There is no test suite (`test/` only holds PlatformIO's default scaffolding README) and no linter configured. `pio run` is the only correctness check available — always run it after changes, since this is embedded C++ with no other feedback loop.
@@ -24,7 +24,7 @@ Library dependencies are declared via `lib_deps` in `platformio.ini` and auto-in
 ## Architecture
 
 - **`Config.h`** is the single source of truth for everything environment/hardware-specific: WiFi credentials, web server port, NTP server/timezone/sync interval, GPIO pin assignments, the pool pump's time windows (`POOL_INTERVALS`), the pH/chlorine pumps' start times, dosing duration (`PH_DOSE_SEC`/`CL_DOSE_SEC`, chosen from the `DoseDuration` enum), WiFi reconnect behavior, main loop delay, and the temperature sensor's polling interval. New magic numbers should go here, not inline in the other files.
-- **`Poolsteuerung.ino`** is the entry point: constructs `DailyTimeSync`, `WifiManager`, and `ServerManager` from `Config` values, then in `loop()` reconnects WiFi if dropped, re-syncs time if needed, and calls `ServerManager::handleLogic()` every tick.
+- **`PoolGuard.ino`** is the entry point: constructs `DailyTimeSync`, `WifiManager`, and `ServerManager` from `Config` values, then in `loop()` reconnects WiFi if dropped, re-syncs time if needed, and calls `ServerManager::handleLogic()` every tick.
 - **`ServerManager`** is the core controller:
   - Holds three `Device` structs (`_pool`, `_ph`, `_cl`), each with a pin, a `DeviceMode` (`OFF`/`ON`/`AUTO`), and up to 3 `TimeRange` windows.
   - `handleLogic()` (called every `loop()` iteration) evaluates each device's mode against the current time via `isInside()` and drives the GPIO pins. **Safety interlock**: the pH/chlorine pumps only run in `AUTO`/`ON` mode if the pool pump is confirmed actually running (`flowOk = digitalRead(_pool.pin)`) — this prevents dosing chemicals into a stagnant pool.

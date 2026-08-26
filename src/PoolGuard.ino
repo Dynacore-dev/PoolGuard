@@ -13,7 +13,7 @@ void setup() {
   // wait for serial connection
   while (!Serial)
     ;
-  Serial.println("Poolsteuerung gestartet");
+  Serial.println("PoolGuard gestartet");
   wifi.begin();
   rtcClock.begin();
   if (wifi.isConnected()) {
