@@ -27,6 +27,7 @@ static String T(const char* de, const char* en) {
 // HTTP Basic Auth guard for the dashboard/control endpoints; sends the 401
 // challenge itself when unauthenticated, so callers just need to return.
 static bool requireAuth(AsyncWebServerRequest *request) {
+  if (!Config::WEB_AUTH_ENABLED) return true;
   if (!request->authenticate(Config::WEB_AUTH_USER, Config::WEB_AUTH_PASSWORD)) {
     request->requestAuthentication();
     return false;

@@ -66,7 +66,9 @@ enum class Language { DE, EN };
 constexpr Language DASHBOARD_LANGUAGE = Language::DE;  // Language::DE or Language::EN
 
 // ---------------------- Dashboard authentication ---------------------------
-// HTTP Basic Auth, required for all dashboard/control endpoints (/, /set, /status)
+// HTTP Basic Auth for all dashboard/control endpoints (/, /set, /status).
+// Off by default (trusted home network); set to true to require a login.
+constexpr bool WEB_AUTH_ENABLED = false;
 constexpr const char* WEB_AUTH_USER     = "admin";
 constexpr const char* WEB_AUTH_PASSWORD = "DEIN_DASHBOARD_PASSWORT";
 
