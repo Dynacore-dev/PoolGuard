@@ -14,7 +14,8 @@ void DS18B20::update() {
 
     // 1. fetch temperature from the previous request
     float temp = _sensors.getTempCByIndex(0);
-    if (temp != DEVICE_DISCONNECTED_C) {
+    _sensorOk = (temp != DEVICE_DISCONNECTED_C);
+    if (_sensorOk) {
       _lastTemp = temp;
     }
 

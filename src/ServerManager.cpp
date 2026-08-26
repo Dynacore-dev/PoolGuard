@@ -81,7 +81,11 @@ void ServerManager::begin(DailyTimeSync *ts) {
 
     if(isPoolpumpActiv){
       html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
-      html += "<div id='temp'> " + T("Wassertemperatur", "Water temperature") + ": "+String(tempSensor.getLatestTemperature()) +"°C";
+      if (tempSensor.isConnected()) {
+        html += "<div id='temp'> " + T("Wassertemperatur", "Water temperature") + ": "+String(tempSensor.getLatestTemperature()) +"°C</div>";
+      } else {
+        html += "<div id='temp' style='color:red;'>" + T("Temperatursensor-Fehler", "Temperature sensor error") + "</div>";
+      }
     }
     else html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
 

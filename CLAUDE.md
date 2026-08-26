@@ -8,7 +8,7 @@ PoolGuard is PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that co
 
 ## Setup
 
-`src/Config.h` is gitignored (it holds real WiFi credentials and the dashboard password) and must exist locally before building: copy `src/Config.example.h` to `src/Config.h` and fill in `Config::WIFI_SSID`/`WIFI_PASSWORD` and `Config::WEB_AUTH_USER`/`WEB_AUTH_PASSWORD`. `pio run` will fail with `fatal error: Config.h: No such file or directory` if it's missing.
+`src/Config.h` is gitignored (it holds real WiFi credentials, the dashboard password, and the OTA password) and must exist locally before building: copy `src/Config.example.h` to `src/Config.h` and fill in `Config::WIFI_SSID`/`WIFI_PASSWORD`, `Config::WEB_AUTH_USER`/`WEB_AUTH_PASSWORD`, and `Config::OTA_PASSWORD`. `pio run` will fail with `fatal error: Config.h: No such file or directory` if it's missing.
 
 ## Commands
 
@@ -24,7 +24,7 @@ Library dependencies are declared via `lib_deps` in `platformio.ini` and auto-in
 ## Architecture
 
 - **`Config.h`** is the single source of truth for everything environment/hardware-specific: WiFi credentials, web server port, NTP server/timezone/sync interval, GPIO pin assignments, the pool pump's time windows (`POOL_INTERVALS`), the pH/chlorine pumps' start times, dosing duration (`PH_DOSE_SEC`/`CL_DOSE_SEC`, chosen from the `DoseDuration` enum), WiFi reconnect behavior, main loop delay, and the temperature sensor's polling interval. New magic numbers should go here, not inline in the other files.
-- **`PoolGuard.ino`** is the entry point: constructs `DailyTimeSync`, `WifiManager`, and `ServerManager` from `Config` values, then in `loop()` reconnects WiFi if dropped, re-syncs time if needed, and calls `ServerManager::handleLogic()` every tick.
+- **`PoolGuard.ino`** is the entry point: constructs `DailyTimeSync`, `WifiManager`, and `ServerManager` from `Config` values. `setup()` arms the Task Watchdog (`Config::WATCHDOG_TIMEOUT_SEC`, panics/reboots on timeout) and starts `ArduinoOTA` (if `Config::OTA_ENABLED`, password-protected via `Config::OTA_PASSWORD`) once WiFi is up. `loop()` resets the watchdog, reconnects WiFi if dropped, re-syncs time if needed, services `ArduinoOTA.handle()`, and calls `ServerManager::handleLogic()` every tick. `Config::WATCHDOG_TIMEOUT_SEC` must stay above the worst-case WiFi-reconnect blocking time (`WIFI_CONNECT_MAX_ATTEMPTS * WIFI_CONNECT_RETRY_DELAY_MS`), or a normal reconnect would falsely trigger a watchdog reboot.
 - **`ServerManager`** is the core controller:
   - Holds three `Device` structs (`_pool`, `_ph`, `_cl`), each with a pin, a `DeviceMode` (`OFF`/`ON`/`AUTO`), and up to 3 `TimeRange` windows.
   - `handleLogic()` (called every `loop()` iteration) evaluates each device's mode against the current time via `isInside()` and drives the GPIO pins. **Safety interlock**: the pH/chlorine pumps only run in `AUTO`/`ON` mode if the pool pump is confirmed actually running (`flowOk = digitalRead(_pool.pin)`) — this prevents dosing chemicals into a stagnant pool.
@@ -34,4 +34,4 @@ Library dependencies are declared via `lib_deps` in `platformio.ini` and auto-in
   - Dosing amounts are shown to the user via `formatDoseLabel()`, which converts a duration in seconds to a liters figure using a linear model (440 sec = 1 L).
 - **`WifiManager`** wraps STA-mode connection setup/retry and exposes `isConnected()`/`getIP()`.
 - **`PoolTime` (`DailyTimeSync`)** syncs the ESP32's RTC via NTP on `begin()` and re-syncs once per `Config::TIME_SYNC_INTERVAL_MS`; `ServerManager` reads the current hour/minute/second from it for schedule checks rather than tracking time itself.
-- **`DS18B20`** wraps `OneWire` + `DallasTemperature` for non-blocking temperature reads (`setWaitForConversion(false)`); `update()` must be called regularly (currently from `ServerManager::handleLogic()`) or the temperature never refreshes.
+- **`DS18B20`** wraps `OneWire` + `DallasTemperature` for non-blocking temperature reads (`setWaitForConversion(false)`); `update()` must be called regularly (currently from `ServerManager::handleLogic()`) or the temperature never refreshes. `isConnected()` reflects whether the last read succeeded (`false` until the first valid reading, and again whenever a read returns `DEVICE_DISCONNECTED_C`); the dashboard shows a red error message instead of a stale/garbage reading when it's `false`.

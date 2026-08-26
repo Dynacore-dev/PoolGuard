@@ -72,11 +72,21 @@ constexpr bool WEB_AUTH_ENABLED = false;
 constexpr const char* WEB_AUTH_USER     = "admin";
 constexpr const char* WEB_AUTH_PASSWORD = "DEIN_DASHBOARD_PASSWORT";
 
+// ---------------------- OTA firmware updates --------------------------------
+constexpr bool OTA_ENABLED        = true;
+constexpr const char* OTA_PASSWORD = "DEIN_OTA_PASSWORT";
+
 // ---------------------- Other time/interval settings ----------------
 constexpr unsigned long MAIN_LOOP_DELAY_MS          = 100;   // delay in loop()
 constexpr int            WIFI_CONNECT_MAX_ATTEMPTS   = 30;    // attempts when connecting to WiFi
 constexpr unsigned long WIFI_CONNECT_RETRY_DELAY_MS = 500;   // wait time between attempts
 constexpr unsigned long TEMP_SENSOR_INTERVAL_MS     = 2000;  // DS18B20 measurement interval
+
+// ---------------------- Watchdog --------------------------------------------
+// Must stay comfortably above the worst-case blocking time in loop(), i.e.
+// WIFI_CONNECT_MAX_ATTEMPTS * WIFI_CONNECT_RETRY_DELAY_MS (currently ~15s),
+// otherwise a normal WiFi reconnect would trigger a false watchdog reset.
+constexpr uint32_t WATCHDOG_TIMEOUT_SEC = 30;
 
 }  // namespace Config
 

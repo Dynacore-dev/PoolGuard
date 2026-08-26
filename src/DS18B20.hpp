@@ -13,6 +13,7 @@ class DS18B20 {
     void update(); // processes measurements in the background
     
     float getLatestTemperature() { return _lastTemp; }
+    bool isConnected() { return _sensorOk; }
     void printAddress(DeviceAddress deviceAddress);
     void printTemperature(DeviceAddress deviceAddress);
     void printResolution(DeviceAddress deviceAddress);
@@ -21,6 +22,7 @@ class DS18B20 {
     OneWire _oneWire;
     DallasTemperature _sensors;
     float _lastTemp = -127.0;
+    bool _sensorOk = false;  // becomes true once a valid reading arrives
     unsigned long _lastMillis = 0;
     const unsigned long _interval = Config::TEMP_SENSOR_INTERVAL_MS;
 };
