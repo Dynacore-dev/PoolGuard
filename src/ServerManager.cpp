@@ -1,20 +1,27 @@
 #include "ServerManager.hpp"
 
-// formats a dosing time (sec) as "M:SS Min = X,XXXL" or "SS Sek = X,XXXL"
+// formats a dosing time (sec) as "M:SS Min = X,XXXL" (DE) or "M:SS min = X.XXXL" (EN)
 String ServerManager::formatDoseLabel(int durationSec) {
+  bool en = Config::DASHBOARD_LANGUAGE == Config::Language::EN;
+
   String timeStr;
   int mm = durationSec / 60;
   int ss = durationSec % 60;
-  if (mm > 0) timeStr = String(mm) + ":" + (ss < 10 ? "0" : "") + String(ss) + " Min";
-  else timeStr = String(ss) + " Sek";
+  if (mm > 0) timeStr = String(mm) + ":" + (ss < 10 ? "0" : "") + String(ss) + (en ? " min" : " Min");
+  else timeStr = String(ss) + (en ? " sec" : " Sek");
 
   float liters = durationSec / 440.0f;  // linear: 55 sec = 0,125 L
   String literStr = String(liters, 3);
   while (literStr.endsWith("0")) literStr.remove(literStr.length() - 1);
   if (literStr.endsWith(".")) literStr.remove(literStr.length() - 1);
-  literStr.replace(".", ",");
+  if (!en) literStr.replace(".", ",");
 
   return timeStr + " = " + literStr + "L";
+}
+
+// picks the German or English text depending on Config::DASHBOARD_LANGUAGE
+static String T(const char* de, const char* en) {
+  return Config::DASHBOARD_LANGUAGE == Config::Language::EN ? String(en) : String(de);
 }
 
 ServerManager::ServerManager(int port)
@@ -46,14 +53,14 @@ void ServerManager::begin(DailyTimeSync *ts) {
     html += "  function update() { fetch('/status').then(r => r.json()).then(data => {";
     html += "    document.getElementById('time').innerText = data.time;";
     html += "    ['pool','ph','cl'].forEach(d => { ";
-    html += "         let stateTxt = data[d].state ? 'LÄUFT' : 'AUS'; ";
+    html += "         let stateTxt = data[d].state ? '" + T("LÄUFT", "RUNNING") + "' : '" + T("AUS", "OFF") + "'; ";
     html += "         let modeVal = data[d].mode; ";
     // special case: interlock active (mode ON, but pump OFF because pool pump is OFF)
     html += "         if (modeVal == 1 && !data[d].state && d !== 'pool') {";
-    html += "             stateTxt = 'WARTET (Sperre)';";
+    html += "             stateTxt = '" + T("WARTET (Sperre)", "WAITING (interlock)") + "';";
     html += "}";
     html += "         document.getElementById(d + '_st').innerText = stateTxt; ";
-    html += "         document.getElementById(d + '_md').innerText = (modeVal == 2) ? 'AUTO' : 'HAND'; ";  // display logic
+    html += "         document.getElementById(d + '_md').innerText = (modeVal == 2) ? 'AUTO' : '" + T("HAND", "MANUAL") + "'; ";  // display logic
     html += "         document.getElementById(d + '_md').style.color = (data[d].mode == 2) ? 'blue' : 'orange'; ";
     html += "    });";
     html += "  }); } setInterval(update, 1000);";
@@ -61,24 +68,24 @@ void ServerManager::begin(DailyTimeSync *ts) {
 
     if(isPoolpumpActiv){
       html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
-      html += "<div id='temp'> Wassertemperatur: "+String(tempSensor.getLatestTemperature()) +"°C";
+      html += "<div id='temp'> " + T("Wassertemperatur", "Water temperature") + ": "+String(tempSensor.getLatestTemperature()) +"°C";
     }
     else html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
 
 
     auto createBox = [&](String id, String label, Device &d, int doseSec = 0) {
       String s = "<div class='box'><h3 id=pumpLabel>" + label + "</h3>";
-      s += "<p>Status: <b id='" + id + "_st'>-</b> | Modus: <b id='" + id + "_md'>-</b></p>";
+      s += "<p>" + T("Status", "Status") + ": <b id='" + id + "_st'>-</b> | " + T("Modus", "Mode") + ": <b id='" + id + "_md'>-</b></p>";
 
       // display the intervals
       s += "<div style='font-size:0.85em; color:#666; margin-bottom:10px;'>";
       if (id == "pool") {
-        s += "Intervalle: " + String(d.times[0].startH) + ":00-" + String(d.times[0].endH) + ":00, ";
+        s += T("Intervalle", "Intervals") + ": " + String(d.times[0].startH) + ":00-" + String(d.times[0].endH) + ":00, ";
         s += String(d.times[1].startH) + ":00-" + String(d.times[1].endH) + ":00, ";
         s += String(d.times[2].startH) + ":00-" + String(d.times[2].endH) + ":00";
       } else {
-        s += "Auto-Laufzeit: " + String(d.times[0].startH) + ":" + (d.times[0].startM < 10 ? "0" : "") + String(d.times[0].startM);
-        s += " (für " + formatDoseLabel(doseSec) + ")";
+        s += T("Auto-Laufzeit", "Auto runtime") + ": " + String(d.times[0].startH) + ":" + (d.times[0].startM < 10 ? "0" : "") + String(d.times[0].startM);
+        s += " (" + T("für ", "for ") + formatDoseLabel(doseSec) + ")";
       }
       s += "</div>";
 
@@ -88,9 +95,9 @@ void ServerManager::begin(DailyTimeSync *ts) {
       return s;
     };
 
-    html += createBox("pool", "Poolpumpe", _pool);
-    html += createBox("ph", "PH-Pumpe", _ph, _phDoseSec);
-    html += createBox("cl", "Chlor-Pumpe", _cl, _clDoseSec);
+    html += createBox("pool", T("Poolpumpe", "Pool pump"), _pool);
+    html += createBox("ph", T("PH-Pumpe", "pH pump"), _ph, _phDoseSec);
+    html += createBox("cl", T("Chlor-Pumpe", "Chlorine pump"), _cl, _clDoseSec);
 
     html += "</body></html>";
     request->send(200, "text/html", html);
