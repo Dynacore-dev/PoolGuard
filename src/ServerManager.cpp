@@ -24,6 +24,16 @@ static String T(const char* de, const char* en) {
   return Config::DASHBOARD_LANGUAGE == Config::Language::EN ? String(en) : String(de);
 }
 
+// HTTP Basic Auth guard for the dashboard/control endpoints; sends the 401
+// challenge itself when unauthenticated, so callers just need to return.
+static bool requireAuth(AsyncWebServerRequest *request) {
+  if (!request->authenticate(Config::WEB_AUTH_USER, Config::WEB_AUTH_PASSWORD)) {
+    request->requestAuthentication();
+    return false;
+  }
+  return true;
+}
+
 ServerManager::ServerManager(int port)
   : _server(port), _timeSync(nullptr), tempSensor(Config::PIN_TEMP_SENSOR), isPoolpumpActiv(false) {}
 
@@ -37,6 +47,8 @@ void ServerManager::begin(DailyTimeSync *ts) {
   pinMode(_cl.pin, OUTPUT);
 
   _server.on("/", HTTP_GET, [this](AsyncWebServerRequest *request) {
+    if (!requireAuth(request)) return;
+
     String html = "<!DOCTYPE html><html><head><meta charset='UTF-8'>";
     html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
 
@@ -104,18 +116,25 @@ void ServerManager::begin(DailyTimeSync *ts) {
   });
 
   _server.on("/set", HTTP_GET, [this](AsyncWebServerRequest *request) {
+    if (!requireAuth(request)) return;
+
     if (request->hasParam("dev") && request->hasParam("m")) {
       String dev = request->getParam("dev")->value();
-      DeviceMode m = (DeviceMode)request->getParam("m")->value().toInt();
-      if (dev == "pool") _pool.mode = m;
-      else if (dev == "ph") _ph.mode = m;
-      else if (dev == "cl") _cl.mode = m;
+      int mVal = request->getParam("m")->value().toInt();
+      if (mVal >= MODE_OFF && mVal <= MODE_AUTO) {
+        DeviceMode m = (DeviceMode)mVal;
+        if (dev == "pool") _pool.mode = m;
+        else if (dev == "ph") _ph.mode = m;
+        else if (dev == "cl") _cl.mode = m;
+      }
     }
     request->send(200, "text/plain", "OK");
   });
 
   // the status endpoint now also returns the mode (0, 1, or 2)
   _server.on("/status", HTTP_GET, [this](AsyncWebServerRequest *request) {
+    if (!requireAuth(request)) return;
+
     String j = "{ \"time\":\"" + _timeSync->getFormattedTime() + "\",";
     j += "\"pool\":{\"state\":" + String(digitalRead(_pool.pin)) + ",\"mode\":" + String(_pool.mode) + "},";
     j += "\"ph\":{\"state\":" + String(digitalRead(_ph.pin)) + ",\"mode\":" + String(_ph.mode) + "},";

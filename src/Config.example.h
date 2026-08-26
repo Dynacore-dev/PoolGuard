@@ -65,6 +65,11 @@ constexpr int CL_DOSE_SEC = DOSE_0125L;
 enum class Language { DE, EN };
 constexpr Language DASHBOARD_LANGUAGE = Language::DE;  // Language::DE or Language::EN
 
+// ---------------------- Dashboard authentication ---------------------------
+// HTTP Basic Auth, required for all dashboard/control endpoints (/, /set, /status)
+constexpr const char* WEB_AUTH_USER     = "admin";
+constexpr const char* WEB_AUTH_PASSWORD = "DEIN_DASHBOARD_PASSWORT";
+
 // ---------------------- Other time/interval settings ----------------
 constexpr unsigned long MAIN_LOOP_DELAY_MS          = 100;   // delay in loop()
 constexpr int            WIFI_CONNECT_MAX_ATTEMPTS   = 30;    // attempts when connecting to WiFi

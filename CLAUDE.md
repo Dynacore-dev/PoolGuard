@@ -8,7 +8,7 @@ PoolGuard is PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that co
 
 ## Setup
 
-`src/Config.h` is gitignored (it holds real WiFi credentials) and must exist locally before building: copy `src/Config.example.h` to `src/Config.h` and fill in `Config::WIFI_SSID`/`WIFI_PASSWORD`. `pio run` will fail with `fatal error: Config.h: No such file or directory` if it's missing.
+`src/Config.h` is gitignored (it holds real WiFi credentials and the dashboard password) and must exist locally before building: copy `src/Config.example.h` to `src/Config.h` and fill in `Config::WIFI_SSID`/`WIFI_PASSWORD` and `Config::WEB_AUTH_USER`/`WEB_AUTH_PASSWORD`. `pio run` will fail with `fatal error: Config.h: No such file or directory` if it's missing.
 
 ## Commands
 
@@ -29,7 +29,8 @@ Library dependencies are declared via `lib_deps` in `platformio.ini` and auto-in
   - Holds three `Device` structs (`_pool`, `_ph`, `_cl`), each with a pin, a `DeviceMode` (`OFF`/`ON`/`AUTO`), and up to 3 `TimeRange` windows.
   - `handleLogic()` (called every `loop()` iteration) evaluates each device's mode against the current time via `isInside()` and drives the GPIO pins. **Safety interlock**: the pH/chlorine pumps only run in `AUTO`/`ON` mode if the pool pump is confirmed actually running (`flowOk = digitalRead(_pool.pin)`) — this prevents dosing chemicals into a stagnant pool.
   - Also owns the `AsyncWebServer` and the `DS18B20` temperature sensor; `handleLogic()` calls `tempSensor.update()` each tick (the sensor itself throttles actual reads via `Config::TEMP_SENSOR_INTERVAL_MS`).
-  - Web routes are registered in `begin()`: `GET /` returns a self-contained HTML/CSS/JS dashboard (built as inline C++ string concatenation), `GET /set?dev=<pool|ph|cl>&m=<0|1|2>` changes a device's mode, `GET /status` returns JSON state that the dashboard polls every second.
+  - Web routes are registered in `begin()`: `GET /` returns a self-contained HTML/CSS/JS dashboard (built as inline C++ string concatenation), `GET /set?dev=<pool|ph|cl>&m=<0|1|2>` changes a device's mode, `GET /status` returns JSON state that the dashboard polls every second. All three routes require HTTP Basic Auth (`Config::WEB_AUTH_USER`/`WEB_AUTH_PASSWORD`, checked via `requireAuth()`) since `/set` can force any pump on with no other safeguard against remote/CSRF abuse.
+  - Dashboard text is bilingual via `Config::DASHBOARD_LANGUAGE` (`Language::DE`/`EN`); the `T(de, en)` helper in `ServerManager.cpp` picks the active string.
   - Dosing amounts are shown to the user via `formatDoseLabel()`, which converts a duration in seconds to a liters figure using a linear model (440 sec = 1 L).
 - **`WifiManager`** wraps STA-mode connection setup/retry and exposes `isConnected()`/`getIP()`.
 - **`PoolTime` (`DailyTimeSync`)** syncs the ESP32's RTC via NTP on `begin()` and re-syncs once per `Config::TIME_SYNC_INTERVAL_MS`; `ServerManager` reads the current hour/minute/second from it for schedule checks rather than tracking time itself.
