@@ -15,7 +15,6 @@ void setup() {
     ;
   Serial.println("PoolGuard gestartet");
   wifi.begin();
-  rtcClock.begin();
   if (wifi.isConnected()) {
     // 2. start time sync
     rtcClock.begin();

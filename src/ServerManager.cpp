@@ -25,7 +25,7 @@ static String T(const char* de, const char* en) {
 }
 
 ServerManager::ServerManager(int port)
-  : _server(port), tempSensor(Config::PIN_TEMP_SENSOR) {}
+  : _server(port), _timeSync(nullptr), tempSensor(Config::PIN_TEMP_SENSOR), isPoolpumpActiv(false) {}
 
 void ServerManager::begin(DailyTimeSync *ts) {
   _timeSync = ts;
@@ -149,21 +149,17 @@ void ServerManager::handleLogic() {
   // 1. pool pump (master)
   bool poolShouldRun = false;
   if (_pool.mode == MODE_ON) {
-    isPoolpumpActiv = true;
     poolShouldRun = true;
   } else if (_pool.mode == MODE_OFF) {
-    isPoolpumpActiv = false;
     poolShouldRun = false;
-    }
-  else if (_pool.mode == MODE_AUTO) {
+  } else if (_pool.mode == MODE_AUTO) {
     for (int i = 0; i < _pool.activeIntervals; i++) {
       if (isInside(h, m, s, _pool.times[i])) {
-        isPoolpumpActiv = true;
         poolShouldRun = true;
       }
-      else isPoolpumpActiv = false;
     }
   }
+  isPoolpumpActiv = poolShouldRun;
   digitalWrite(_pool.pin, poolShouldRun);
 
   // 2. safety interlock (is the pool pump really ON?)
