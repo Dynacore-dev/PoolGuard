@@ -1,4 +1,5 @@
 #include "WifiManager.hpp"
+#include "Config.h"
 
 WifiManager::WifiManager(const char* ssid, const char* password, const char* host)
   : _ssid(ssid), _password(password), _host(host), connectionCount(0) {}
@@ -9,8 +10,8 @@ void WifiManager::begin() {
   WiFi.begin(_ssid, _password);
 
   int attempts = 0;
-  while (WiFi.status() != WL_CONNECTED && attempts < 30) {
-    delay(500);
+  while (WiFi.status() != WL_CONNECTED && attempts < Config::WIFI_CONNECT_MAX_ATTEMPTS) {
+    delay(Config::WIFI_CONNECT_RETRY_DELAY_MS);
     Serial.print(".");
     attempts++;
   }

@@ -18,7 +18,7 @@ String ServerManager::formatDoseLabel(int durationSec) {
 }
 
 ServerManager::ServerManager(int port)
-  : _server(port), tempSensor(16) {}
+  : _server(port), tempSensor(Config::PIN_TEMP_SENSOR) {}
 
 void ServerManager::begin(DailyTimeSync *ts) {
   _timeSync = ts;

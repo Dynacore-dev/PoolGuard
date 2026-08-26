@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#include "Config.h"
 
 class DS18B20 {
   public:
@@ -21,7 +22,7 @@ class DS18B20 {
     DallasTemperature _sensors;
     float _lastTemp = -127.0;
     unsigned long _lastMillis = 0;
-    const unsigned long _interval = 2000; // Messintervall: 2 Sekunden
+    const unsigned long _interval = Config::TEMP_SENSOR_INTERVAL_MS;
 };
 
 #endif

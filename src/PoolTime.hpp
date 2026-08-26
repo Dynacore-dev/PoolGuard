@@ -4,17 +4,18 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include "time.h"
+#include "Config.h"
 
 class DailyTimeSync {
 private:
   const char* _ntpServer;
   const char* _timezone;
   unsigned long _lastSyncMillis;
-  const unsigned long _syncInterval = 24 * 60 * 60 * 1000;
+  const unsigned long _syncInterval = Config::TIME_SYNC_INTERVAL_MS;
 
 public:
-  DailyTimeSync(const char* server = "pool.ntp.org",
-                const char* tz = "CET-1CEST,M3.5.0,M10.5.0/3");
+  DailyTimeSync(const char* server = Config::NTP_SERVER,
+                const char* tz = Config::TIMEZONE);
 
   void begin();
   void sync();
