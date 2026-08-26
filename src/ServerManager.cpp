@@ -35,7 +35,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
 
     html += "<style>";
     html += "body{font-family:sans-serif; text-align:center; background:#f4f4f4;} .box{background:white; border:1px solid #ccc; margin:10px auto; padding:15px; border-radius:10px; max-width:400px;} ";
-    html += "button{padding:10px; margin:5px; width:70px; cursor:pointer; border-radius:5px; border:1px solid #999;} .active{background-color:#4CAF50; color:white; border:none;}";
+    html += "button{padding:10px; margin:5px; width:70px; cursor:pointer; border-radius:5px; border:1px solid #999;}";
     html += "#time{font-size: 16px; margin: 5px; padding:0px;}";
     html += "#head{font-size: 40px; margin:5px; padding: 0px;}";
     html += "#pumpLabel{margin: 5px; padding: 0px;}";

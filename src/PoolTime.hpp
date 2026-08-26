@@ -29,19 +29,4 @@ public:
   String getFormattedTime();
 };
 
-class PoolPumpTime {
-private:
-
-public:
-
-  bool checkPoolpumpTime(int switchTimeOnHour1, int switchTimeOffHour1, int switchTimeOnHour2,
-                         int switchTimeOffHour2, int switchTimeOnHour3, int switchTimeOffHour3);
-
-  bool checkPHpumpTime(int switchTimeOnHour, int switchTimeOffHour, int switchTimeOnMinute,
-                       int switchTimeOffMinute, int switchTimeOnSec, int switchTimeOffSec);
-
-  bool check_Chlor_pump_status(int switchTimeOnHour, int switchTimeOffHour, int switchTimeOnMinute,
-                               int switchTimeOffMinute, int switchTimeOnSec, int switchTimeOffSec);
-};
-
 #endif

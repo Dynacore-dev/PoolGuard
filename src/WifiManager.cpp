@@ -35,9 +35,3 @@ bool WifiManager::isConnected() {
 String WifiManager::getIP() {
   return WiFi.localIP().toString();
 }
-
-void wifi_disconnect() {
-  //disconnect WiFi as it's no longer needed
-  WiFi.disconnect(true);
-  WiFi.mode(WIFI_OFF);
-}

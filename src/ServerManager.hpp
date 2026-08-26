@@ -38,8 +38,6 @@ private:
 
   bool isInside(int h, int m, int s, TimeRange tr, int durationSec = -1);
 
-  void updateDevice(Device& d);
-
 public:
   ServerManager(int port = Config::SERVER_PORT);
   void begin(DailyTimeSync* ts);
