@@ -9,7 +9,6 @@ private:
     const char* _ssid;
     const char* _password;
     const char* _host;
-    // WiFiServer _server; // Der Server-Instanz
 
 public:
     // Konstruktor mit Port-Vorgabe (Standard 80)
@@ -17,10 +16,7 @@ public:
 
     void begin();
     bool isConnected();
-    
-    // Gibt ein Client-Objekt zurück, wenn eine Verbindung zum Server besteht
-    WiFiClient availableClient();
-    
+
     // Hilfsfunktion für die IP
     String getIP();
 

@@ -133,6 +133,8 @@ bool ServerManager::isInside(int h, int m, int s, TimeRange tr, int durationSec)
 }
 
 void ServerManager::handleLogic() {
+  tempSensor.update();  // nicht-blockierend, prüft intern selbst das Messintervall
+
   int h = _timeSync->getHour();
   int m = _timeSync->getMinute();
   int s = _timeSync->getSecond();

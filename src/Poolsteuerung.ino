@@ -27,7 +27,7 @@ void setup() {
 void loop() {
   if (!wifi.isConnected()) {
     wifi.begin();
-    Serial.print("Wlan reconnected - count: " + wifi.connectionCount);
+    Serial.print(String("Wlan reconnected - count: ") + wifi.connectionCount);
     wifi.connectionCount++;
   }
 

@@ -23,7 +23,6 @@ void WifiManager::begin() {
     Serial.println(_ssid);
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
-    // _server.begin(); // Startet den WiFiServer
   } else {
     Serial.println("\nVerbindung fehlgeschlagen.");
   }
