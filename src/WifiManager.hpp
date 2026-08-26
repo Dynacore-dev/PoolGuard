@@ -11,13 +11,12 @@ private:
     const char* _host;
 
 public:
-    // Konstruktor mit Port-Vorgabe (Standard 80)
     WifiManager(const char* ssid, const char* password, const char* host);
 
     void begin();
     bool isConnected();
 
-    // Hilfsfunktion für die IP
+    // helper for the IP address
     String getIP();
 
     int connectionCount;

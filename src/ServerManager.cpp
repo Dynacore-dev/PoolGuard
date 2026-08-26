@@ -1,6 +1,6 @@
 #include "ServerManager.hpp"
 
-// Formatiert eine Dosierzeit (Sek.) als "M:SS Min = X,XXXL" bzw. "SS Sek = X,XXXL"
+// formats a dosing time (sec) as "M:SS Min = X,XXXL" or "SS Sek = X,XXXL"
 String ServerManager::formatDoseLabel(int durationSec) {
   String timeStr;
   int mm = durationSec / 60;
@@ -8,7 +8,7 @@ String ServerManager::formatDoseLabel(int durationSec) {
   if (mm > 0) timeStr = String(mm) + ":" + (ss < 10 ? "0" : "") + String(ss) + " Min";
   else timeStr = String(ss) + " Sek";
 
-  float liters = durationSec / 440.0f;  // linear: 55 Sek. = 0,125 L
+  float liters = durationSec / 440.0f;  // linear: 55 sec = 0,125 L
   String literStr = String(liters, 3);
   while (literStr.endsWith("0")) literStr.remove(literStr.length() - 1);
   if (literStr.endsWith(".")) literStr.remove(literStr.length() - 1);
@@ -24,7 +24,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
   _timeSync = ts;
   tempSensor.begin();
 
-  // Pins initialisieren
+  // initialize pins
   pinMode(_pool.pin, OUTPUT);
   pinMode(_ph.pin, OUTPUT);
   pinMode(_cl.pin, OUTPUT);
@@ -48,12 +48,12 @@ void ServerManager::begin(DailyTimeSync *ts) {
     html += "    ['pool','ph','cl'].forEach(d => { ";
     html += "         let stateTxt = data[d].state ? 'LÄUFT' : 'AUS'; ";
     html += "         let modeVal = data[d].mode; ";
-    // Spezialfall: Verriegelung aktiv (Modus EIN, aber Pumpe AUS weil Poolpumpe AUS)
+    // special case: interlock active (mode ON, but pump OFF because pool pump is OFF)
     html += "         if (modeVal == 1 && !data[d].state && d !== 'pool') {";
     html += "             stateTxt = 'WARTET (Sperre)';";
     html += "}";
     html += "         document.getElementById(d + '_st').innerText = stateTxt; ";
-    html += "         document.getElementById(d + '_md').innerText = (modeVal == 2) ? 'AUTO' : 'HAND'; ";  // Logik für Anzeige
+    html += "         document.getElementById(d + '_md').innerText = (modeVal == 2) ? 'AUTO' : 'HAND'; ";  // display logic
     html += "         document.getElementById(d + '_md').style.color = (data[d].mode == 2) ? 'blue' : 'orange'; ";
     html += "    });";
     html += "  }); } setInterval(update, 1000);";
@@ -70,7 +70,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
       String s = "<div class='box'><h3 id=pumpLabel>" + label + "</h3>";
       s += "<p>Status: <b id='" + id + "_st'>-</b> | Modus: <b id='" + id + "_md'>-</b></p>";
 
-      // Anzeige der Intervalle
+      // display the intervals
       s += "<div style='font-size:0.85em; color:#666; margin-bottom:10px;'>";
       if (id == "pool") {
         s += "Intervalle: " + String(d.times[0].startH) + ":00-" + String(d.times[0].endH) + ":00, ";
@@ -107,7 +107,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
     request->send(200, "text/plain", "OK");
   });
 
-  // Der Status-Endpunkt liefert nun auch den Modus (0, 1 oder 2)
+  // the status endpoint now also returns the mode (0, 1, or 2)
   _server.on("/status", HTTP_GET, [this](AsyncWebServerRequest *request) {
     String j = "{ \"time\":\"" + _timeSync->getFormattedTime() + "\",";
     j += "\"pool\":{\"state\":" + String(digitalRead(_pool.pin)) + ",\"mode\":" + String(_pool.mode) + "},";
@@ -119,7 +119,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
   _server.begin();
 }
 
-// Hilfsfunktion zur Zeitprüfung (Stunde, Minute, Sekunde)
+// helper function for time checks (hour, minute, second)
 bool ServerManager::isInside(int h, int m, int s, TimeRange tr, int durationSec) {
   long current = h * 3600L + m * 60L + s;
   long start = tr.startH * 3600L + tr.startM * 60L;
@@ -133,13 +133,13 @@ bool ServerManager::isInside(int h, int m, int s, TimeRange tr, int durationSec)
 }
 
 void ServerManager::handleLogic() {
-  tempSensor.update();  // nicht-blockierend, prüft intern selbst das Messintervall
+  tempSensor.update();  // non-blocking, checks the measurement interval internally
 
   int h = _timeSync->getHour();
   int m = _timeSync->getMinute();
   int s = _timeSync->getSecond();
 
-  // 1. Poolpumpe (Master)
+  // 1. pool pump (master)
   bool poolShouldRun = false;
   if (_pool.mode == MODE_ON) {
     isPoolpumpActiv = true;
@@ -159,19 +159,19 @@ void ServerManager::handleLogic() {
   }
   digitalWrite(_pool.pin, poolShouldRun);
 
-  // 2. Sicherheits-Verriegelung (Ist die Poolpumpe wirklich AN?)
+  // 2. safety interlock (is the pool pump really ON?)
   bool flowOk = digitalRead(_pool.pin);
 
-  // 3. Chemie-Pumpen (PH & Chlor), Dauer über _phDoseSec/_clDoseSec einstellbar
+  // 3. chemical pumps (pH & chlorine), duration adjustable via _phDoseSec/_clDoseSec
   auto processChemie = [&](Device &d, int durationSec) {
     bool run = false;
     if (d.mode == MODE_ON) run = true;
     else if (d.mode == MODE_OFF) run = false;
     else if (d.mode == MODE_AUTO) {
-      // Läuft im Auto-Modus NUR wenn auch die Poolpumpe läuft
+      // in auto mode this ONLY runs if the pool pump is also running
       if (flowOk && isInside(h, m, s, d.times[0], durationSec)) run = true;
     }
-    // Zusätzliche harte Verriegelung: Chemie IMMER AUS wenn Pool AUS
+    // additional hard interlock: chemical pumps ALWAYS OFF when pool is OFF
     digitalWrite(d.pin, (run && flowOk) ? HIGH : LOW);
   };
 

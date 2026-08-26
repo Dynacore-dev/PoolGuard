@@ -10,7 +10,7 @@ class DS18B20 {
   public:
     DS18B20(int pin);
     void begin();
-    void update(); // Verarbeitet Messungen im Hintergrund
+    void update(); // processes measurements in the background
     
     float getLatestTemperature() { return _lastTemp; }
     void printAddress(DeviceAddress deviceAddress);

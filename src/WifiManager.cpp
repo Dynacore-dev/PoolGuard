@@ -5,7 +5,7 @@ WifiManager::WifiManager(const char* ssid, const char* password, const char* hos
   : _ssid(ssid), _password(password), _host(host), connectionCount(0) {}
 
 void WifiManager::begin() {
-  esp_wifi_set_ps(WIFI_PS_NONE);  // Deaktiviert WiFi Power Save
+  esp_wifi_set_ps(WIFI_PS_NONE);  // disables WiFi power save
   Serial.printf("Verbinde mit %s ", _ssid);
   WiFi.begin(_ssid, _password);
 

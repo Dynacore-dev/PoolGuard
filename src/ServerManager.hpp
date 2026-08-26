@@ -14,18 +14,18 @@ enum DeviceMode { MODE_OFF = 0,
 struct Device {
   int pin;
   DeviceMode mode;
-  TimeRange times[3];   // Platz für bis zu 3 Intervalle
-  int activeIntervals;  // Wie viele Intervalle genutzt werden
+  TimeRange times[3];   // room for up to 3 intervals
+  int activeIntervals;  // how many intervals are used
 };
 
 class ServerManager {
 private:
   AsyncWebServer _server;
-  DailyTimeSync* _timeSync;  // Zeiger auf die Zeit-
-  
+  DailyTimeSync* _timeSync;  // pointer to the time sync
+
   DS18B20 tempSensor;
 
-  // Definition der drei Geräte - Zeitpläne & Dosiermenge kommen aus Config.h
+  // definition of the three devices - schedules & dosing amount come from Config.h
   Device _pool = { Config::PIN_POOL_PUMP, MODE_AUTO,
                     { Config::POOL_INTERVALS[0], Config::POOL_INTERVALS[1], Config::POOL_INTERVALS[2] }, 3 };
   Device _ph = { Config::PIN_PH_PUMP, MODE_AUTO, { Config::PH_START }, 1 };
@@ -41,7 +41,7 @@ private:
 public:
   ServerManager(int port = Config::SERVER_PORT);
   void begin(DailyTimeSync* ts);
-  void handleLogic();  // Prüft die Zeit im Auto-Modus
+  void handleLogic();  // checks the time in auto mode
   bool isPoolpumpActiv;
 };
 

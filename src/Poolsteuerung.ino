@@ -10,16 +10,16 @@ ServerManager myServer(Config::SERVER_PORT);
 
 void setup() {
   Serial.begin(115200);
-  // auf serielle Verbindung warten
+  // wait for serial connection
   while (!Serial)
     ;
   Serial.println("Poolsteuerung gestartet");
   wifi.begin();
   rtcClock.begin();
   if (wifi.isConnected()) {
-    // 2. Zeit-Sync starten
+    // 2. start time sync
     rtcClock.begin();
-    // 3. Server starten
+    // 3. start server
     myServer.begin(&rtcClock);
   }
 }
@@ -32,6 +32,6 @@ void loop() {
   }
 
   rtcClock.updateIfNeeded();
-  myServer.handleLogic();  // Steuert alle 3 Pumpen basierend auf Modus/Zeit
+  myServer.handleLogic();  // controls all 3 pumps based on mode/time
   delay(Config::MAIN_LOOP_DELAY_MS);
 }

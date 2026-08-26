@@ -21,7 +21,7 @@ public:
   void sync();
   void updateIfNeeded();
 
-  // Einzelne Zeitwerte abfragen
+  // query individual time values
   int getHour();
   int getMinute();
   int getSecond();

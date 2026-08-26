@@ -23,7 +23,7 @@ void DailyTimeSync::updateIfNeeded() {
     }
 }
 
-// Hilfsmethode: Holt aktuelle Zeitstruktur von der internen RTC
+// helper method: gets the current time structure from the internal RTC
 int DailyTimeSync::getHour() {
     struct tm timeinfo;
     if (!getLocalTime(&timeinfo)) return 0;

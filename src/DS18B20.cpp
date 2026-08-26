@@ -4,21 +4,21 @@ DS18B20::DS18B20(int pin) : _oneWire(pin), _sensors(&_oneWire) {}
 
 void DS18B20::begin() {
   _sensors.begin();
-  _sensors.setWaitForConversion(false); // Wichtig: Verhindert, dass das Programm blockiert
+  _sensors.setWaitForConversion(false); // important: prevents the program from blocking
 }
 
 void DS18B20::update() {
-  // Prüfen, ob das Intervall abgelaufen ist
+  // check whether the interval has elapsed
   if (millis() - _lastMillis >= _interval) {
     _lastMillis = millis();
-    
-    // 1. Temperatur vom vorherigen Request abholen
+
+    // 1. fetch temperature from the previous request
     float temp = _sensors.getTempCByIndex(0);
     if (temp != DEVICE_DISCONNECTED_C) {
       _lastTemp = temp;
     }
 
-    // 2. Neuen Request für den nächsten Zyklus starten
+    // 2. start a new request for the next cycle
     _sensors.requestTemperatures();
   }
 }
