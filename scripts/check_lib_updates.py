@@ -20,6 +20,14 @@ import urllib.parse
 import urllib.request
 
 TIMEOUT_SECONDS = 2
+# urlopen's timeout only bounds individual socket operations, not the total
+# request duration - a peer trickling bytes with gaps just under that
+# per-read timeout could otherwise stall the check indefinitely. This caps
+# the whole read regardless of how the bytes arrive.
+TOTAL_DEADLINE_SECONDS = 5
+# Far larger than any real registry search response; guards against an
+# unbounded/oversized body from a malicious or broken endpoint.
+MAX_RESPONSE_BYTES = 64 * 1024
 CHECK_INTERVAL_SECONDS = 24 * 60 * 60
 REGISTRY_SEARCH_URL = "https://api.registry.platformio.org/v3/search"
 
@@ -41,10 +49,28 @@ def local_version(lib_dir):
         return None
 
 
+def _read_with_deadline(resp, max_bytes, deadline_seconds):
+    deadline = time.time() + deadline_seconds
+    chunks = []
+    total = 0
+    while True:
+        if time.time() > deadline:
+            raise TimeoutError("registry response exceeded the total time budget")
+        chunk = resp.read(8192)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > max_bytes:
+            raise ValueError("registry response exceeded the maximum allowed size")
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
 def latest_registry_version(owner, name):
     query = urllib.parse.urlencode({"query": f"owner:{owner} name:{name}"})
     with urllib.request.urlopen(f"{REGISTRY_SEARCH_URL}?{query}", timeout=TIMEOUT_SECONDS) as resp:
-        data = json.load(resp)
+        body = _read_with_deadline(resp, MAX_RESPONSE_BYTES, TOTAL_DEADLINE_SECONDS)
+    data = json.loads(body)
     items = data.get("items") or []
     if not items:
         return None

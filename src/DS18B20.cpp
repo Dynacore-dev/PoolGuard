@@ -5,6 +5,14 @@ DS18B20::DS18B20(int pin) : _oneWire(pin), _sensors(&_oneWire) {}
 void DS18B20::begin() {
   _sensors.begin();
   _sensors.setWaitForConversion(false); // important: prevents the program from blocking
+
+  // Start the first conversion here and delay update()'s first read by one
+  // full _interval (via _lastMillis), giving the DS18B20 time to finish
+  // converting. Without this, update()'s first read happens before any
+  // conversion was ever requested and can return the sensor's 85.00C
+  // power-on default instead of a real reading or a disconnect error.
+  _sensors.requestTemperatures();
+  _lastMillis = millis();
 }
 
 void DS18B20::update() {

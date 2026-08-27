@@ -174,7 +174,12 @@ bool ServerManager::isInside(int h, int m, int s, TimeRange tr, int durationSec)
   long start = tr.startH * 3600L + tr.startM * 60L;
 
   if (durationSec > 0) {
-    return (current >= start && current < (start + durationSec));
+    long end = start + durationSec;
+    if (end >= 86400L) {
+      // window wraps past midnight (e.g. start 23:58 + 220s dose)
+      return (current >= start) || (current < (end - 86400L));
+    }
+    return (current >= start && current < end);
   } else {
     long end = tr.endH * 3600L + tr.endM * 60L;
     return (current >= start && current < end);
