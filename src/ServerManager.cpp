@@ -209,7 +209,10 @@ void ServerManager::handleLogic() {
   isPoolpumpActiv = poolShouldRun;
   digitalWrite(_pool.pin, poolShouldRun);
 
-  // 2. safety interlock (is the pool pump really ON?)
+  // 2. safety interlock: only confirms the ESP32 is still driving its own
+  // output pin HIGH, NOT that the relay/motor/water is actually running -
+  // there's no flow sensor or relay-feedback input. A relay/motor failure
+  // that leaves the pin driven HIGH would not be caught by this check.
   bool flowOk = digitalRead(_pool.pin);
 
   // 3. chemical pumps (pH & chlorine), duration adjustable via _phDoseSec/_clDoseSec

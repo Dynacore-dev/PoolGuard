@@ -50,7 +50,9 @@ int DailyTimeSync::getSecond() {
 
 String DailyTimeSync::getFormattedTime() {
     struct tm timeinfo;
-    if (!getLocalTime(&timeinfo, GET_TIME_TIMEOUT_MS)) return "Zeit nicht gesetzt";
+    if (!getLocalTime(&timeinfo, GET_TIME_TIMEOUT_MS)) {
+        return Config::DASHBOARD_LANGUAGE == Config::Language::EN ? "Time not set" : "Zeit nicht gesetzt";
+    }
     char buffer[20];
     strftime(buffer, sizeof(buffer), "%d.%m.%Y %H:%M:%S", &timeinfo);
     return String(buffer);

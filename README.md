@@ -6,7 +6,7 @@ PlatformIO/Arduino firmware for an ESP32 that controls a pool's filter pump plus
 
 - **Scheduled pool pump** — up to 3 daily on/off time windows (`Config::POOL_INTERVALS`).
 - **pH / chlorine dosing pumps** — start at a configured time and run for a configurable dose duration.
-- **Safety interlock** — the pH/chlorine pumps only run in `AUTO`/`ON` mode if the pool pump is confirmed actually running, so chemicals are never dosed into a stagnant pool.
+- **Safety interlock** — the pH/chlorine pumps only run in `AUTO`/`ON` mode while the pool pump's own output pin is driven HIGH. This is a GPIO read-back, not a real flow sensor or relay feedback signal, so it won't catch a relay/motor failure that leaves the pin driven HIGH.
 - **Web dashboard** — self-contained HTML/CSS/JS page (no external assets) served directly from the ESP32, polling `/status` every second. Available in German or English (`Config::DASHBOARD_LANGUAGE`).
 - **Manual override** — each device (pool, pH, chlorine) can be forced `OFF`/`ON` or left in `AUTO` (schedule-driven) via the dashboard.
 - **Water temperature** — non-blocking DS18B20 readings, shown on the dashboard with a clear error state if the sensor is disconnected.
