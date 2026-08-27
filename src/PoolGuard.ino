@@ -21,17 +21,20 @@ void setup() {
   esp_task_wdt_add(NULL);
 
   wifi.begin();
-  if (wifi.isConnected()) {
-    // 2. start time sync
-    rtcClock.begin();
-    // 3. start server
-    myServer.begin(&rtcClock);
 
-    if (Config::OTA_ENABLED) {
-      ArduinoOTA.setHostname(Config::WIFI_HOSTNAME);
-      ArduinoOTA.setPassword(Config::OTA_PASSWORD);
-      ArduinoOTA.begin();
-    }
+  // Initialize regardless of whether the initial WiFi connection attempt
+  // succeeded: loop() keeps retrying WiFi afterward, but handleLogic() runs
+  // on every loop() tick and needs _timeSync set and the pump pins
+  // configured. Gating this on wifi.isConnected() left _timeSync null (and
+  // pins/server/OTA never set up) whenever WiFi wasn't already up at boot,
+  // with no re-initialization once it reconnected.
+  rtcClock.begin();
+  myServer.begin(&rtcClock);
+
+  if (Config::OTA_ENABLED) {
+    ArduinoOTA.setHostname(Config::WIFI_HOSTNAME);
+    ArduinoOTA.setPassword(Config::OTA_PASSWORD);
+    ArduinoOTA.begin();
   }
 }
 

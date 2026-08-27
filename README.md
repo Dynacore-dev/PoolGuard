@@ -75,7 +75,7 @@ Since they're vendored, they never update on their own. See **Scripts** below fo
 
 - **`Config.h`** — single source of truth for WiFi credentials, web server port, NTP/timezone settings, GPIO pin assignments, pump schedules, dosing durations, WiFi reconnect behavior, main loop delay, and the temperature sensor's polling interval.
 - **`PoolGuard.ino`** — entry point. `setup()` arms the task watchdog and starts `ArduinoOTA` once WiFi is up; `loop()` resets the watchdog, reconnects WiFi if dropped, re-syncs time if needed, services OTA, and calls `ServerManager::handleLogic()`.
-- **`ServerManager`** — the core controller. Holds three `Device` structs (pool, pH, chlorine) each with a pin, mode, and time windows; `handleLogic()` evaluates schedules and drives GPIO pins with the pump safety interlock; owns the `AsyncWebServer` and DS18B20 sensor; registers `GET /`, `GET /set?dev=<pool|ph|cl>&m=<0|1|2>`, and `GET /status`.
+- **`ServerManager`** — the core controller. Holds three `Device` structs (pool, pH, chlorine) each with a pin, mode, and time windows; `handleLogic()` evaluates schedules and drives GPIO pins with the pump safety interlock; owns the `AsyncWebServer` and DS18B20 sensor; registers `GET /`, `POST /set?dev=<pool|ph|cl>&m=<0|1|2>`, and `GET /status`.
 - **`WifiManager`** — STA-mode connection setup/retry.
 - **`PoolTime` (`DailyTimeSync`)** — NTP time sync, re-synced periodically.
 - **`DS18B20`** — non-blocking OneWire/DallasTemperature wrapper; `update()` must be polled regularly to refresh readings.

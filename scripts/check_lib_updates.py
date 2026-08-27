@@ -82,9 +82,9 @@ def main():
             continue
         try:
             latest = latest_registry_version(owner, name)
-        except (OSError, ValueError, urllib.error.URLError):
-            # No internet or registry unreachable - stay silent, don't
-            # block or slow down the build.
+        except (OSError, ValueError, urllib.error.URLError, KeyError, TypeError, IndexError, AttributeError):
+            # No internet, registry unreachable, or an unexpected response
+            # shape - stay silent, don't block or slow down the build.
             return
         if latest and latest != current:
             outdated.append((lib_dir, current, latest))

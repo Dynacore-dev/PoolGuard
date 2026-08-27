@@ -35,6 +35,23 @@ static bool requireAuth(AsyncWebServerRequest *request) {
   return true;
 }
 
+// CSRF guard for state-changing endpoints (/set): browsers send an Origin
+// header on cross-origin requests, so reject any request whose Origin
+// doesn't match this device's own Host. Non-browser clients (curl, scripts)
+// typically send no Origin at all and are let through, since they aren't a
+// cross-site forgery vector.
+static bool requireSameOrigin(AsyncWebServerRequest *request) {
+  if (!request->hasHeader("Origin")) return true;
+  String origin = request->getHeader("Origin")->value();
+  int schemeEnd = origin.indexOf("://");
+  String originHost = schemeEnd >= 0 ? origin.substring(schemeEnd + 3) : origin;
+  if (originHost != request->host()) {
+    request->send(403, "text/plain", "Forbidden (cross-origin request)");
+    return false;
+  }
+  return true;
+}
+
 ServerManager::ServerManager(int port)
   : _server(port), _timeSync(nullptr), tempSensor(Config::PIN_TEMP_SENSOR), isPoolpumpActiv(false) {}
 
@@ -62,7 +79,7 @@ void ServerManager::begin(DailyTimeSync *ts) {
     html += "</style>";
 
     html += "<script>";
-    html += "  function setMode(dev, m) { fetch('/set?dev=' + dev + '&m=' + m); }";
+    html += "  function setMode(dev, m) { fetch('/set?dev=' + dev + '&m=' + m, { method: 'POST' }); }";
     html += "  function update() { fetch('/status').then(r => r.json()).then(data => {";
     html += "    document.getElementById('time').innerText = data.time;";
     html += "    ['pool','ph','cl'].forEach(d => { ";
@@ -120,8 +137,9 @@ void ServerManager::begin(DailyTimeSync *ts) {
     request->send(200, "text/html", html);
   });
 
-  _server.on("/set", HTTP_GET, [this](AsyncWebServerRequest *request) {
+  _server.on("/set", HTTP_POST, [this](AsyncWebServerRequest *request) {
     if (!requireAuth(request)) return;
+    if (!requireSameOrigin(request)) return;
 
     if (request->hasParam("dev") && request->hasParam("m")) {
       String dev = request->getParam("dev")->value();
