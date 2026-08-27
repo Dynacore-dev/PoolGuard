@@ -55,11 +55,21 @@ There is no test suite and no linter configured — `pio run` is the only correc
 
 ## Dependencies
 
-Declared via `lib_deps` in `platformio.ini` and auto-installed on `pio run`:
+The four Arduino libraries are vendored under `lib/` instead of being declared via `lib_deps`, so the project builds fully offline (no PlatformIO registry access needed, e.g. on a school laptop without internet):
 
 - `OneWire`
 - `DallasTemperature`
 - `esp32async/AsyncTCP` and `esp32async/ESPAsyncWebServer` (maintained forks — not the original `me-no-dev` packages)
+
+Since they're vendored, they never update on their own. See **Scripts** below for how to check for and pull newer versions.
+
+## Scripts
+
+| Script | Purpose |
+|---|---|
+| `scripts/update-libs.sh` | Re-downloads the four libraries from the PlatformIO registry and replaces `lib/`. Run occasionally on a machine with internet access, then review `git diff lib/` and rebuild before committing. |
+| `scripts/check_lib_updates.py` | Runs automatically as a PlatformIO pre-build hook (`extra_scripts` in `platformio.ini`). Non-blocking, rate-limited (once/24h) check that prints a note if newer library versions are available — never fails or slows down an offline build. |
+| `scripts/list-boards.sh [filter]` | Lists PlatformIO boards for Espressif and Arduino platforms (`espressif32`, `espressif8266`, `atmelavr`, `atmelsam`), optionally filtered by ID/name substring. Useful for finding the right `board = <ID>` value for `platformio.ini`. |
 
 ## Architecture
 
