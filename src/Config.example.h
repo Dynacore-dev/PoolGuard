@@ -68,6 +68,12 @@ constexpr Language DASHBOARD_LANGUAGE = Language::DE;  // Language::DE or Langua
 // ---------------------- Dashboard authentication ---------------------------
 // HTTP Basic Auth for all dashboard/control endpoints (/, /set, /status).
 // Off by default (trusted home network); set to true to require a login.
+//
+// WARNING: the server is plain HTTP, not HTTPS - there is no TLS anywhere
+// in this project. When enabled, credentials travel base64-encoded (NOT
+// encrypted) and can be read by anyone who can sniff the same network
+// segment. Only enable this on a network you trust, and don't reuse a
+// password you use elsewhere.
 constexpr bool WEB_AUTH_ENABLED = false;
 constexpr const char* WEB_AUTH_USER     = "admin";
 constexpr const char* WEB_AUTH_PASSWORD = "DEIN_DASHBOARD_PASSWORT";

@@ -11,7 +11,7 @@ PlatformIO/Arduino firmware for an ESP32 that controls a pool's filter pump plus
 - **Manual override** — each device (pool, pH, chlorine) can be forced `OFF`/`ON` or left in `AUTO` (schedule-driven) via the dashboard.
 - **Water temperature** — non-blocking DS18B20 readings, shown on the dashboard with a clear error state if the sensor is disconnected.
 - **NTP time sync** — daily re-sync so schedules stay accurate without a RTC battery.
-- **Optional dashboard auth** — HTTP Basic Auth for `/`, `/set`, and `/status`, off by default for use on a trusted home LAN.
+- **Optional dashboard auth** — HTTP Basic Auth for `/`, `/set`, and `/status`, off by default for use on a trusted home LAN. The server is plain HTTP (no TLS), so credentials travel unencrypted — only enable this on a network you trust.
 - **OTA updates** — password-protected `ArduinoOTA`, enabled by default.
 - **Watchdog** — reboots the device if the main loop ever hangs.
 

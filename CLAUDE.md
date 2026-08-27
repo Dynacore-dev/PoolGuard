@@ -19,7 +19,7 @@ PoolGuard is PlatformIO/Arduino firmware for an ESP32 (`esp32dev` board) that co
 
 There is no test suite (`test/` only holds PlatformIO's default scaffolding README) and no linter configured. `pio run` is the only correctness check available — always run it after changes, since this is embedded C++ with no other feedback loop.
 
-Library dependencies are declared via `lib_deps` in `platformio.ini` and auto-install on `pio run`: `OneWire`, `DallasTemperature`, and the `esp32async` forks of `AsyncTCP`/`ESPAsyncWebServer` (the original `me-no-dev` packages are unmaintained — keep using the `esp32async` ones).
+Library dependencies (`OneWire`, `DallasTemperature`, and the `esp32async` forks of `AsyncTCP`/`ESPAsyncWebServer` — the original `me-no-dev` packages are unmaintained, keep using the `esp32async` ones) are vendored under `lib/` rather than declared via `lib_deps` in `platformio.ini`, so the project builds fully offline (e.g. on a school laptop without internet access). Run `scripts/update-libs.sh` on a machine with internet access to pull newer versions; see the README's Dependencies/Scripts sections.
 
 ## Architecture
 

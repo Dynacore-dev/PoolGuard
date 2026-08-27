@@ -7,6 +7,7 @@
 # on a machine WITH internet access to pull fresh versions, then review
 # `git diff lib/` and rebuild with `pio run` before committing.
 set -euo pipefail
+shopt -s nullglob
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LIB_DIR="$REPO_ROOT/lib"
@@ -36,13 +37,20 @@ echo "void setup() {} void loop() {}" > "$WORKDIR/src/main.cpp"
 echo "Downloading libraries via PlatformIO..."
 ( cd "$WORKDIR" && pio pkg install )
 
+vendored_count=0
 for dir in "$WORKDIR"/.pio/libdeps/esp32dev/*/; do
   name="$(basename "$dir")"
   echo "Vendoring $name..."
   rm -rf "${LIB_DIR:?}/$name"
   cp -r "$dir" "$LIB_DIR/$name"
   rm -rf "$LIB_DIR/$name/.git" "$LIB_DIR/$name/.github" "$LIB_DIR/$name/examples" "$LIB_DIR/$name/test"
+  vendored_count=$((vendored_count + 1))
 done
+
+if [ "$vendored_count" -eq 0 ]; then
+  echo "Error: pio pkg install produced no library directories under $WORKDIR/.pio/libdeps/esp32dev - nothing was vendored." >&2
+  exit 1
+fi
 
 # ESPAsyncWebServer's library.json declares dependencies for platforms we
 # don't target (RPAsyncTCP for RP2040, ESPAsyncTCP for ESP8266). Without
