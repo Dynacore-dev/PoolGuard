@@ -93,18 +93,13 @@ void ServerManager::begin(DailyTimeSync *ts) {
     html += "         document.getElementById(d + '_md').innerText = (modeVal == 2) ? 'AUTO' : '" + T("HAND", "MANUAL") + "'; ";  // display logic
     html += "         document.getElementById(d + '_md').style.color = (data[d].mode == 2) ? 'blue' : 'orange'; ";
     html += "    });";
+    html += "    let tempEl = document.getElementById('temp');";
+    html += "    if (data.tempOk) { tempEl.innerText = '" + T("Wassertemperatur", "Water temperature") + ": ' + data.tempC + '°C'; tempEl.style.color = ''; }";
+    html += "    else { tempEl.innerText = '" + T("Temperatursensor-Fehler", "Temperature sensor error") + "'; tempEl.style.color = 'red'; }";
     html += "  }); } setInterval(update, 1000);";
     html += "</script></head><body onload='update()'>";
 
-    if(isPoolpumpActiv){
-      html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
-      if (tempSensor.isConnected()) {
-        html += "<div id='temp'> " + T("Wassertemperatur", "Water temperature") + ": "+String(tempSensor.getLatestTemperature()) +"°C</div>";
-      } else {
-        html += "<div id='temp' style='color:red;'>" + T("Temperatursensor-Fehler", "Temperature sensor error") + "</div>";
-      }
-    }
-    else html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div>";
+    html += "<h1 id='head'>PoolGuard</h1><div id='time'>--:--:--</div><div id='temp'>-</div>";
 
 
     auto createBox = [&](String id, String label, Device &d, int doseSec = 0) {
@@ -161,7 +156,9 @@ void ServerManager::begin(DailyTimeSync *ts) {
     String j = "{ \"time\":\"" + _timeSync->getFormattedTime() + "\",";
     j += "\"pool\":{\"state\":" + String(digitalRead(_pool.pin)) + ",\"mode\":" + String(_pool.mode) + "},";
     j += "\"ph\":{\"state\":" + String(digitalRead(_ph.pin)) + ",\"mode\":" + String(_ph.mode) + "},";
-    j += "\"cl\":{\"state\":" + String(digitalRead(_cl.pin)) + ",\"mode\":" + String(_cl.mode) + "} }";
+    j += "\"cl\":{\"state\":" + String(digitalRead(_cl.pin)) + ",\"mode\":" + String(_cl.mode) + "},";
+    j += "\"tempOk\":" + String(tempSensor.isConnected() ? "true" : "false") + ",";
+    j += "\"tempC\":" + String(tempSensor.getLatestTemperature()) + " }";
     request->send(200, "application/json", j);
   });
 
