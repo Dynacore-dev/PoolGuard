@@ -61,6 +61,11 @@ enum DoseDuration {
 constexpr int PH_DOSE_SEC = DOSE_0125L;
 constexpr int CL_DOSE_SEC = DOSE_0125L;
 
+// Prevents the pH and chlorine pumps from dosing at the same time (in any
+// mode combination, including two manual ON), since mixing the undiluted
+// chemicals can be hazardous. pH wins ties and blocks chlorine that tick.
+constexpr bool CHEM_PUMP_INTERLOCK_ENABLED = true;
+
 // ---------------------- Dashboard language --------------------------------
 enum class Language { DE, EN };
 constexpr Language DASHBOARD_LANGUAGE = Language::DE;  // Language::DE or Language::EN

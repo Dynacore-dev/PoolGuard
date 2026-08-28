@@ -216,18 +216,24 @@ void ServerManager::handleLogic() {
   bool flowOk = digitalRead(_pool.pin);
 
   // 3. chemical pumps (pH & chlorine), duration adjustable via _phDoseSec/_clDoseSec
-  auto processChemie = [&](Device &d, int durationSec) {
-    bool run = false;
-    if (d.mode == MODE_ON) run = true;
-    else if (d.mode == MODE_OFF) run = false;
-    else if (d.mode == MODE_AUTO) {
-      // in auto mode this ONLY runs if the pool pump is also running
-      if (flowOk && isInside(h, m, s, d.times[0], durationSec)) run = true;
-    }
-    // additional hard interlock: chemical pumps ALWAYS OFF when pool is OFF
-    digitalWrite(d.pin, (run && flowOk) ? HIGH : LOW);
+  auto wantsToRun = [&](Device &d, int durationSec) {
+    if (d.mode == MODE_ON) return true;
+    if (d.mode == MODE_OFF) return false;
+    // MODE_AUTO: this ONLY runs if the pool pump is also running
+    return flowOk && isInside(h, m, s, d.times[0], durationSec);
   };
 
-  processChemie(_ph, _phDoseSec);
-  processChemie(_cl, _clDoseSec);
+  bool phWantsRun = wantsToRun(_ph, _phDoseSec);
+  bool clWantsRun = wantsToRun(_cl, _clDoseSec);
+
+  // mutual exclusion: pH and chlorine must never dose at the same time, in any
+  // mode combination (including two manual ON), since mixing the two chemicals
+  // undiluted can be hazardous. pH wins ties and blocks chlorine that tick.
+  // Config::CHEM_PUMP_INTERLOCK_ENABLED lets this be turned off if needed.
+  bool phRun = phWantsRun && flowOk;
+  bool clRun = clWantsRun && flowOk && !(Config::CHEM_PUMP_INTERLOCK_ENABLED && phRun);
+
+  // additional hard interlock: chemical pumps ALWAYS OFF when pool is OFF
+  digitalWrite(_ph.pin, phRun ? HIGH : LOW);
+  digitalWrite(_cl.pin, clRun ? HIGH : LOW);
 }

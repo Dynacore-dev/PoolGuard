@@ -7,6 +7,7 @@ PlatformIO/Arduino firmware for an ESP32 that controls a pool's filter pump plus
 - **Scheduled pool pump** — up to 3 daily on/off time windows (`Config::POOL_INTERVALS`).
 - **pH / chlorine dosing pumps** — start at a configured time and run for a configurable dose duration.
 - **Safety interlock** — the pH/chlorine pumps only run in `AUTO`/`ON` mode while the pool pump's own output pin is driven HIGH. This is a GPIO read-back, not a real flow sensor or relay feedback signal, so it won't catch a relay/motor failure that leaves the pin driven HIGH.
+- **pH/chlorine mutual exclusion** — the two dosing pumps can never run at the same time, in any mode combination (including both set to manual `ON`), since mixing the undiluted chemicals can be hazardous; pH takes priority and blocks chlorine while it's running. Toggle with `Config::CHEM_PUMP_INTERLOCK_ENABLED` (on by default).
 - **Web dashboard** — self-contained HTML/CSS/JS page (no external assets) served directly from the ESP32, polling `/status` every second. Available in German or English (`Config::DASHBOARD_LANGUAGE`).
 - **Manual override** — each device (pool, pH, chlorine) can be forced `OFF`/`ON` or left in `AUTO` (schedule-driven) via the dashboard.
 - **Water temperature** — non-blocking DS18B20 readings, shown on the dashboard with a clear error state if the sensor is disconnected.
@@ -185,7 +186,7 @@ Since they're vendored, they never update on their own. See **Scripts** below fo
 
 - **`Config.h`** — single source of truth for WiFi credentials, web server port, NTP/timezone settings, GPIO pin assignments, pump schedules, dosing durations, WiFi reconnect behavior, main loop delay, and the temperature sensor's polling interval.
 - **`PoolGuard.ino`** — entry point. `setup()` arms the task watchdog and starts `ArduinoOTA` once WiFi is up; `loop()` resets the watchdog, reconnects WiFi if dropped, re-syncs time if needed, services OTA, and calls `ServerManager::handleLogic()`.
-- **`ServerManager`** — the core controller. Holds three `Device` structs (pool, pH, chlorine) each with a pin, mode, and time windows; `handleLogic()` evaluates schedules and drives GPIO pins with the pump safety interlock; owns the `AsyncWebServer` and DS18B20 sensor; registers `GET /`, `POST /set?dev=<pool|ph|cl>&m=<0|1|2>`, and `GET /status`.
+- **`ServerManager`** — the core controller. Holds three `Device` structs (pool, pH, chlorine) each with a pin, mode, and time windows; `handleLogic()` evaluates schedules and drives GPIO pins with the pump safety interlock and the pH/chlorine mutual exclusion; owns the `AsyncWebServer` and DS18B20 sensor; registers `GET /`, `POST /set?dev=<pool|ph|cl>&m=<0|1|2>`, and `GET /status`.
 - **`WifiManager`** — STA-mode connection setup/retry.
 - **`PoolTime` (`DailyTimeSync`)** — NTP time sync, re-synced periodically.
 - **`DS18B20`** — non-blocking OneWire/DallasTemperature wrapper; `update()` must be polled regularly to refresh readings.
