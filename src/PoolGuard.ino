@@ -10,6 +10,19 @@ DailyTimeSync rtcClock(Config::NTP_SERVER, Config::TIMEZONE);
 WifiManager wifi(Config::WIFI_SSID, Config::WIFI_PASSWORD, Config::WIFI_HOSTNAME);
 ServerManager myServer(Config::SERVER_PORT);
 
+bool otaStarted = false;
+
+// ArduinoOTA.begin() also registers the mDNS responder for
+// WIFI_HOSTNAME.local. Only call this once WiFi is actually connected -
+// starting it while disconnected leaves both OTA and mDNS dead until the
+// next reboot, since begin() is never retried on its own.
+void beginOTA() {
+  ArduinoOTA.setHostname(Config::WIFI_HOSTNAME);
+  ArduinoOTA.setPassword(Config::OTA_PASSWORD);
+  ArduinoOTA.begin();
+  otaStarted = true;
+}
+
 void setup() {
   Serial.begin(115200);
   // wait for serial connection
@@ -31,10 +44,8 @@ void setup() {
   rtcClock.begin();
   myServer.begin(&rtcClock);
 
-  if (Config::OTA_ENABLED) {
-    ArduinoOTA.setHostname(Config::WIFI_HOSTNAME);
-    ArduinoOTA.setPassword(Config::OTA_PASSWORD);
-    ArduinoOTA.begin();
+  if (Config::OTA_ENABLED && wifi.isConnected()) {
+    beginOTA();
   }
 }
 
@@ -47,7 +58,10 @@ void loop() {
     wifi.connectionCount++;
   }
 
-  if (Config::OTA_ENABLED) ArduinoOTA.handle();
+  if (Config::OTA_ENABLED) {
+    if (!otaStarted && wifi.isConnected()) beginOTA();
+    if (otaStarted) ArduinoOTA.handle();
+  }
 
   rtcClock.updateIfNeeded();
   myServer.handleLogic();  // controls all 3 pumps based on mode/time
