@@ -27,6 +27,8 @@ PlatformIO/Arduino firmware for an ESP32 that controls a pool's filter pump plus
 
 Pin numbers and all other hardware/environment specifics live in `src/Config.h` (see Setup below).
 
+The KiCad PCB design this firmware runs on lives in [`hardware/PoolDosingController/`](hardware/PoolDosingController/README.md) — schematic, board layout, full BOM, and a self-contained project-local library (no third-party KiCad library packages needed to open it).
+
 ## Installation
 
 Step-by-step guide to go from a fresh machine to a flashed board. All commands below are PlatformIO Core CLI (`pio`) — the same commands work whether you run them from a plain terminal or from inside an IDE's built-in terminal (VS Code + PlatformIO IDE extension, or CLion + the PlatformIO plugin both wrap the same CLI).

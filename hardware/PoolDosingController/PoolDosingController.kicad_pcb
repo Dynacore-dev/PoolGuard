@@ -171,7 +171,7 @@
 		)
 		(path "/2d446116-722f-4252-bc40-206f65adc21e")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -497,7 +497,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/f9d88bc3-352d-426d-b879-d32a80cdd60f")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -645,7 +645,7 @@
 		)
 		(path "/c4b90bb8-e644-4dc9-b625-6786d8630f08")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1243,7 +1243,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b23d6a10-41b8-4180-91e6-cf68f39e5c65")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1458,7 +1458,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a3c6d318-d587-43e9-acb7-9f2dc456194d")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1673,7 +1673,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/592a4387-8525-426b-8776-0db86ff93f7e")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1889,7 +1889,7 @@
 		)
 		(path "/b019dd20-899b-4f19-af63-620bdae8850f")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2225,7 +2225,7 @@
 		)
 		(path "/61c24d47-e329-4f98-8d3d-1a57a09683d1")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2523,7 +2523,7 @@
 				)
 			)
 		)
-		(property "Value" "0,33uF"
+		(property "Value" "0.33uF"
 			(at 3.8 -0.3 0)
 			(layer "F.Fab")
 			(uuid "21395011-54a5-4869-83bd-88540371f988")
@@ -2574,7 +2574,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/a365f5bf-5019-4809-a676-2874b7c52d76")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -2767,7 +2767,7 @@
 		)
 		(path "/063f3096-2c84-4c54-952a-e71f1b860b35")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3097,7 +3097,7 @@
 		(property ki_fp_filters "D*SMA*")
 		(path "/126e1fc7-c385-40c2-9456-92fb655c3f99")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3364,7 +3364,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/8e3c9d0a-34d0-4bf4-911c-f7dbf31f64e4")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3582,7 +3582,7 @@
 		(property ki_fp_filters "D*SMA*")
 		(path "/5eb095ff-d204-4e66-a222-dc96d19c52fc")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -3822,7 +3822,7 @@
 				)
 			)
 		)
-		(property "Value" "0,1uF"
+		(property "Value" "0.1uF"
 			(at -1.340894 -3.66 0)
 			(layer "F.Fab")
 			(uuid "5c7eeb76-3311-4d91-a31b-0e92f7030ceb")
@@ -3884,7 +3884,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/6b1d4bfa-ae7d-41e6-a511-6407e2aea771")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -4112,7 +4112,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/654ce23e-6795-4419-9af0-f4dd5db99ce9")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -4325,7 +4325,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/9dbbea4f-0c53-4e64-80ab-577662658071")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -4485,7 +4485,7 @@
 		)
 		(path "/190f4d84-01dd-4035-af91-add26f80895c")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -5626,7 +5626,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/fc6b4bcd-9c3c-4437-84c5-859bcec6510a")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -5842,7 +5842,7 @@
 		)
 		(path "/483ce31b-3522-4005-9265-536ab14f4aa8")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -6176,7 +6176,7 @@
 		)
 		(path "/2e5285ce-7c4b-4fae-81b3-1ab72f487a9a")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -6502,7 +6502,7 @@
 		)
 		(path "/2e561952-dbd1-461d-858a-9702a7e9522f")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -6828,7 +6828,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/40a1e13a-91d4-4309-9864-f81a93ec4090")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -6976,7 +6976,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/ccdc9d1a-91ef-465a-8e72-c11568302167")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -7191,7 +7191,7 @@
 		)
 		(path "/84a419ef-e381-4145-beb3-0b44db685383")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -7556,7 +7556,7 @@
 		)
 		(path "/f545f6a1-55db-4b9d-b2de-b53d3b8d60f5")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -8043,7 +8043,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/251af0cc-5014-4149-a4d6-f62a76d25625")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -8256,7 +8256,7 @@
 		)
 		(path "/c5cce288-65e1-4375-a5c6-636c96f758f3")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -8573,7 +8573,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d371d028-930a-422b-ab0a-614f55c1d5e6")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -8790,7 +8790,7 @@
 		(property ki_fp_filters "D*SMA*")
 		(path "/ab7ac9c8-c93c-4ee3-ba5f-87757506bb0c")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -9055,7 +9055,7 @@
 		)
 		(path "/05fda17c-13b7-4e23-961c-291f979ef288")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -9398,7 +9398,7 @@
 		(property ki_fp_filters "TO*92*")
 		(path "/9a39a881-2e83-4837-8266-130efcb3bdea")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -9623,7 +9623,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/3c8a9614-dabe-4bc0-9e90-7386e62d85b2")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -9835,7 +9835,7 @@
 		)
 		(path "/90d80c9a-bff7-4545-baf2-db8b749d2d92")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -10152,7 +10152,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/980419b5-2dab-47c9-b473-465fc7f348a7")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -10329,7 +10329,7 @@
 				)
 			)
 		)
-		(property "Value" "0,1uF"
+		(property "Value" "0.1uF"
 			(at -5.5 0.5 90)
 			(layer "F.Fab")
 			(uuid "8c52afbb-f5bb-4c8a-b1c3-48e965c1ed9b")
@@ -10391,7 +10391,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0853ec6c-0301-495c-a7bf-6501780028fb")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -10609,7 +10609,7 @@
 		)
 		(path "/0180e491-3d21-42d0-897f-a159d7df2352")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -10943,7 +10943,7 @@
 		)
 		(path "/875cc775-c0f1-41d1-99c6-742d01ac7758")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -11271,7 +11271,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/65f2bbec-64d0-480a-86b7-6d5814307815")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -11489,7 +11489,7 @@
 		(property ki_fp_filters "D*SMA*")
 		(path "/d5dc193d-a498-42e5-839e-d541ba2972a2")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -11768,7 +11768,7 @@
 		(property ki_fp_filters "TerminalBlock*:*")
 		(path "/2808062a-858c-4f97-9deb-c33e19629c94")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -12195,7 +12195,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/87dde49c-d1ba-4c06-8e23-fe4f04fa1db4")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -12408,7 +12408,7 @@
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/fdc7f797-d5fd-42f0-8de4-1286ce438f40")
 		(sheetname "/")
-		(sheetfile "Dosieranlage.kicad_sch")
+		(sheetfile "PoolDosingController.kicad_sch")
 		(units
 			(unit
 				(name "A")

@@ -6320,7 +6320,7 @@
 			(uuid "14b8fc51-5db2-47e7-8558-3eefd5de607a")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q11")
 					(unit 1)
@@ -6397,7 +6397,7 @@
 			(uuid "6bf3034e-54ee-4a7e-bbb7-65bf9a773c83")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR09")
 					(unit 1)
@@ -6482,7 +6482,7 @@
 			(uuid "08b78457-0edd-49f6-bc2a-14ef9f574518")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q5")
 					(unit 1)
@@ -6567,7 +6567,7 @@
 			(uuid "5903d99b-ecbc-42ca-bc38-f636c28bb57c")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q3")
 					(unit 1)
@@ -6598,7 +6598,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0,1uF"
+		(property "Value" "0.1uF"
 			(at 117.602 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6671,7 +6671,7 @@
 			(uuid "5bfa6941-447c-4521-877f-9eb4b9594b70")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C2")
 					(unit 1)
@@ -6751,7 +6751,7 @@
 			(uuid "e9438c7d-a5c4-406e-be69-2d802ebe111b")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "D3")
 					(unit 1)
@@ -6830,7 +6830,7 @@
 			(uuid "6100c686-83f3-4652-bad5-2cc283acfe7e")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR020")
 					(unit 1)
@@ -7031,7 +7031,7 @@
 			(uuid "728f274e-d5e8-4377-a8c3-69f81d5f8da1")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "U3")
 					(unit 1)
@@ -7109,7 +7109,7 @@
 			(uuid "fbfaec84-84a8-4a55-8073-2ed87e4933b9")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR05")
 					(unit 1)
@@ -7191,7 +7191,7 @@
 			(uuid "da2a4eb6-1d1d-4023-b7f7-20e98cb8f409")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R11")
 					(unit 1)
@@ -7275,7 +7275,7 @@
 			(uuid "8d32a64c-a8a0-43f6-b845-3e99e7745130")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "J1")
 					(unit 1)
@@ -7352,7 +7352,7 @@
 			(uuid "2fba75b2-c12a-4aa2-a7d1-0d04597fda03")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR014")
 					(unit 1)
@@ -7437,7 +7437,7 @@
 			(uuid "402c8733-a03e-4cfb-821c-889f33e29774")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q6")
 					(unit 1)
@@ -7522,7 +7522,7 @@
 			(uuid "2d037fe1-37ba-4d62-a675-74ea1c13d2a5")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q2")
 					(unit 1)
@@ -7607,7 +7607,7 @@
 			(uuid "ebcbcc77-40e2-4df2-836d-499826441011")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q1")
 					(unit 1)
@@ -7684,7 +7684,7 @@
 			(uuid "a8594403-7373-4207-b70f-3eaef70f63e0")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR02")
 					(unit 1)
@@ -7764,7 +7764,7 @@
 			(uuid "85649624-8571-4ebc-9c87-8ade217ce014")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R5")
 					(unit 1)
@@ -7845,7 +7845,7 @@
 			(uuid "90b4703c-cdb4-4e68-a4e0-dd46a3f42e3f")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C5")
 					(unit 1)
@@ -7922,7 +7922,7 @@
 			(uuid "72bade1c-3d80-41fd-a0fb-ccb8777ae4dc")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR011")
 					(unit 1)
@@ -8007,7 +8007,7 @@
 			(uuid "b6d7e788-5375-4414-9619-44894304202b")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q10")
 					(unit 1)
@@ -8085,7 +8085,7 @@
 			(uuid "27350e2a-fcc6-4b08-84cd-b142c203ef09")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#FLG01")
 					(unit 1)
@@ -8164,7 +8164,7 @@
 			(uuid "3eb45fce-8451-438f-97d6-c2dfa8fa1495")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR06")
 					(unit 1)
@@ -8246,7 +8246,7 @@
 			(uuid "9b3d3c86-c203-425b-9428-39120ed1fb9c")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R13")
 					(unit 1)
@@ -8323,7 +8323,7 @@
 			(uuid "e52829f4-3478-4939-8478-4685fed28a08")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR017")
 					(unit 1)
@@ -8403,7 +8403,7 @@
 			(uuid "2a473221-077b-412f-a2c1-32965c0d7af1")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "D2")
 					(unit 1)
@@ -8488,7 +8488,7 @@
 			(uuid "12464c67-d37b-48c2-ae2f-46894feb5fdb")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q12")
 					(unit 1)
@@ -8568,7 +8568,7 @@
 			(uuid "e14686b6-17b6-4cf7-bf94-96eccf58c067")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R3")
 					(unit 1)
@@ -8650,7 +8650,7 @@
 			(uuid "97643c94-948b-4e6c-b7dd-4737a1ebcad9")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R9")
 					(unit 1)
@@ -8681,7 +8681,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0,1uF"
+		(property "Value" "0.1uF"
 			(at 96.52 178.308 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8754,7 +8754,7 @@
 			(uuid "fc3c7e81-942f-49f5-b303-0de4e58d14cd")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C3")
 					(unit 1)
@@ -8831,7 +8831,7 @@
 			(uuid "38ff0eac-f49e-470a-b382-b6a4b6d8b482")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR019")
 					(unit 1)
@@ -8909,7 +8909,7 @@
 			(uuid "8c0343d5-960c-4410-9075-d680a0ddcefa")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#FLG02")
 					(unit 1)
@@ -8990,7 +8990,7 @@
 			(uuid "285d9712-7f50-4647-a638-4557e194f33a")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "J2")
 					(unit 1)
@@ -9075,7 +9075,7 @@
 			(uuid "0f5aa4dd-a16f-448a-abb8-60a777331478")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q7")
 					(unit 1)
@@ -9157,7 +9157,7 @@
 			(uuid "be579492-e3b4-4058-ad7a-de66f685cb56")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R12")
 					(unit 1)
@@ -9239,7 +9239,7 @@
 			(uuid "449252b9-39c8-4a3d-97ea-2375129688e7")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R6")
 					(unit 1)
@@ -9316,7 +9316,7 @@
 			(uuid "42f93aa8-5552-4a25-b670-574890153e5f")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR016")
 					(unit 1)
@@ -9393,7 +9393,7 @@
 			(uuid "e3b5853f-3e5b-45d7-8ef6-086a2abd12c6")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR010")
 					(unit 1)
@@ -9478,7 +9478,7 @@
 			(uuid "5d72803e-be5a-4d3e-b04d-0e8d0a59d9ad")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q4")
 					(unit 1)
@@ -9560,7 +9560,7 @@
 			(uuid "a9c5c297-868d-4881-a0a1-58ad8034baf5")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R8")
 					(unit 1)
@@ -9638,7 +9638,7 @@
 			(uuid "aafddb2b-f401-4c3e-80af-4b59aeb4312f")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR08")
 					(unit 1)
@@ -9734,7 +9734,7 @@
 			(uuid "d2f89c97-4902-4a1e-95da-dcb5948f1a65")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "U2")
 					(unit 1)
@@ -9815,7 +9815,7 @@
 			(uuid "7773aee6-5bcc-4f35-a717-e61f50da796b")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C4")
 					(unit 1)
@@ -9894,7 +9894,7 @@
 			(uuid "40731da3-d647-43a5-901e-564b19aa1c30")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR01")
 					(unit 1)
@@ -9924,7 +9924,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0,33uF"
+		(property "Value" "0.33uF"
 			(at 90.932 162.306 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9986,7 +9986,7 @@
 			(uuid "a7a73ec0-31f7-4ed6-9c4b-e1dfaf3af14a")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C1")
 					(unit 1)
@@ -10066,7 +10066,7 @@
 			(uuid "9b6a86b4-c232-43a9-ae94-453902a0cce7")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R2")
 					(unit 1)
@@ -10144,7 +10144,7 @@
 			(uuid "072df4b1-4e2f-4839-a0cf-c3fbd8116a04")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#FLG03")
 					(unit 1)
@@ -10221,7 +10221,7 @@
 			(uuid "0b21088f-1935-48b2-ba24-bd2d3853abb8")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR015")
 					(unit 1)
@@ -10299,7 +10299,7 @@
 			(uuid "62342af1-67f9-48ca-ba8e-d6923c55bf7d")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR03")
 					(unit 1)
@@ -10379,7 +10379,7 @@
 			(uuid "4b3731c7-836b-4081-80be-a1010f243ce6")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "D4")
 					(unit 1)
@@ -10464,7 +10464,7 @@
 			(uuid "6848eea1-b722-437a-a443-fc818ecd5d88")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q9")
 					(unit 1)
@@ -10544,7 +10544,7 @@
 			(uuid "a11f51f9-934d-4cad-92c7-7a01a35ffbc1")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R4")
 					(unit 1)
@@ -10623,7 +10623,7 @@
 			(uuid "2044fa91-0b59-43a9-b2f0-08c29d595b9f")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR07")
 					(unit 1)
@@ -10721,7 +10721,7 @@
 			(uuid "3605abf1-6be6-485f-b588-05e53ba99cdd")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "J3")
 					(unit 1)
@@ -10806,7 +10806,7 @@
 			(uuid "4839c56a-06e7-42a9-94bd-79bf560d52f6")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "Q8")
 					(unit 1)
@@ -10883,7 +10883,7 @@
 			(uuid "0b927d3b-7699-404f-857f-3ddf50084783")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR013")
 					(unit 1)
@@ -10965,7 +10965,7 @@
 			(uuid "c03a1e6b-657d-4db6-8a59-6cd2953ed130")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R10")
 					(unit 1)
@@ -11047,7 +11047,7 @@
 			(uuid "c932b344-3bf9-4531-919a-cac244cc9fb2")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R7")
 					(unit 1)
@@ -11127,7 +11127,7 @@
 			(uuid "fbdae251-f3f5-4bc8-bc52-4c03fe9a6569")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "D5")
 					(unit 1)
@@ -11204,7 +11204,7 @@
 			(uuid "01ee3b79-2a7e-4441-afaf-e56f1c2054e3")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR012")
 					(unit 1)
@@ -11281,7 +11281,7 @@
 			(uuid "450be8ec-f624-4876-8aba-8e31dfce451f")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR018")
 					(unit 1)
@@ -11359,7 +11359,7 @@
 			(uuid "aee6a665-5aff-41ba-bc6d-9ec85ac2207b")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "#PWR04")
 					(unit 1)
@@ -11453,7 +11453,7 @@
 			(uuid "5a9840bf-3b2f-4b60-8af8-347af59e31e9")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "U1")
 					(unit 1)
@@ -11534,7 +11534,7 @@
 			(uuid "99c54b4d-3151-4a57-8d6f-920b6eab84ea")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "C6")
 					(unit 1)
@@ -11613,7 +11613,7 @@
 			(uuid "de8c4a60-8eab-48ad-a79e-0b7ce9af23ee")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "R1")
 					(unit 1)
@@ -11693,7 +11693,7 @@
 			(uuid "de0b7913-38cd-4560-9764-735310fa3eed")
 		)
 		(instances
-			(project "Dosieranlage"
+			(project "PoolDosingController"
 				(path "/b7d2e729-856c-4327-a617-477ea9523365"
 					(reference "D1")
 					(unit 1)

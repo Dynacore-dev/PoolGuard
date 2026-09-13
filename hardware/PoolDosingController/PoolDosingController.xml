@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/dynacore/cad/KiCad/Dosieranlage/Dosieranlage.kicad_sch</source>
+    <source>/home/dynacore/cad/KiCad/PoolDosingController/PoolDosingController.kicad_sch</source>
     <date>2025-10-24T17:47:36+0200</date>
     <tool>Eeschema 9.0.3+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
@@ -10,7 +10,7 @@
         <company/>
         <rev/>
         <date/>
-        <source>Dosieranlage.kicad_sch</source>
+        <source>PoolDosingController.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -38,7 +38,7 @@
       <libsource lib="PCM_Capacitor_AKL" part="C_Generic" description="Unpolarized capacitor, Generic Symbol, Alternate KiCad Library"/>
       <property name="Packung" value="1206_3216"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor generic"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -58,7 +58,7 @@
       <libsource lib="PCM_Capacitor_US_AKL" part="C_0805" description="SMD 0805 MLCC capacitor, Alternate KiCad Library"/>
       <property name="Packung " value="0805/2012"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor ceramic chip mlcc smd 0805"/>
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -76,7 +76,7 @@
       </fields>
       <libsource lib="PCM_Diode_AKL" part="1N4001" description="DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="diode 1N4001 DO41"/>
       <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -94,7 +94,7 @@
       </fields>
       <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="D*SMA*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -112,7 +112,7 @@
       </fields>
       <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="D*SMA*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -130,7 +130,7 @@
       </fields>
       <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="D*SMA*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -148,7 +148,7 @@
       </fields>
       <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <property name="ki_fp_filters" value="D*SMA*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -165,7 +165,7 @@
       </fields>
       <libsource lib="PCM_SL_Connectors" part="JST_05" description="JST Connector  5 pins"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="JST"/>
       <property name="ki_fp_filters" value="Connector_JST:JST_EH_S5B-EH_1x05_P2.50mm_Horizontal"/>
       <sheetpath names="/" tstamps="/"/>
@@ -183,7 +183,7 @@
       </fields>
       <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="screw terminal"/>
       <property name="ki_fp_filters" value="TerminalBlock*:*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -200,7 +200,7 @@
       </fields>
       <libsource lib="PCM_SL_Pin_Headers" part="PINHD_1x6_Male" description="Pin Header male with pin space 2.54mm. Pin Count -6"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="Pin Header"/>
       <property name="ki_fp_filters" value="PinHeader_1x06_P2.54mm*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -217,7 +217,7 @@
       </fields>
       <libsource lib="PCM_SL_Pin_Headers" part="PINHD_1x19_Female" description="Pin Header female with pin space 2.54mm. Pin Count - 19"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="Pin Header"/>
       <property name="ki_fp_filters" value="PinSocket_1x19_P2.54mm*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -233,7 +233,7 @@
       </fields>
       <libsource lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_2_P5.00mm" description=""/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="Screw Terminal"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>84a419ef-e381-4145-beb3-0b44db685383</tstamps>
@@ -248,7 +248,7 @@
       </fields>
       <libsource lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_8_P5.00mm" description=""/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c4b90bb8-e644-4dc9-b625-6786d8630f08</tstamps>
     </comp>
@@ -264,7 +264,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2e561952-dbd1-461d-858a-9702a7e9522f</tstamps>
@@ -281,7 +281,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2e5285ce-7c4b-4fae-81b3-1ab72f487a9a</tstamps>
@@ -298,7 +298,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>063f3096-2c84-4c54-952a-e71f1b860b35</tstamps>
@@ -315,7 +315,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>90d80c9a-bff7-4545-baf2-db8b749d2d92</tstamps>
@@ -332,7 +332,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>05fda17c-13b7-4e23-961c-291f979ef288</tstamps>
@@ -349,7 +349,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2d446116-722f-4252-bc40-206f65adc21e</tstamps>
@@ -366,7 +366,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>875cc775-c0f1-41d1-99c6-742d01ac7758</tstamps>
@@ -383,7 +383,7 @@
       </fields>
       <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="transistor NPN 2N3904"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c5cce288-65e1-4375-a5c6-636c96f758f3</tstamps>
@@ -400,7 +400,7 @@
       </fields>
       <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b019dd20-899b-4f19-af63-620bdae8850f</tstamps>
@@ -417,7 +417,7 @@
       </fields>
       <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>483ce31b-3522-4005-9265-536ab14f4aa8</tstamps>
@@ -434,7 +434,7 @@
       </fields>
       <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>0180e491-3d21-42d0-897f-a159d7df2352</tstamps>
@@ -451,7 +451,7 @@
       </fields>
       <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>61c24d47-e329-4f98-8d3d-1a57a09683d1</tstamps>
@@ -468,7 +468,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -486,7 +486,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -504,7 +504,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -522,7 +522,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -540,7 +540,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -558,7 +558,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -576,7 +576,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -594,7 +594,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -612,7 +612,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -630,7 +630,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -648,7 +648,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -666,7 +666,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -684,7 +684,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -702,7 +702,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -720,7 +720,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -738,7 +738,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -756,7 +756,7 @@
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -774,7 +774,7 @@
       </fields>
       <libsource lib="PCM_Voltage_Regulator_AKL" part="LM7805S" description="SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="7805 5V 1.5A voltage regulator vreg pmic power supply 3-terminal"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f545f6a1-55db-4b9d-b2de-b53d3b8d60f5</tstamps>
@@ -791,7 +791,7 @@
       </fields>
       <libsource lib="Sensor_Temperature" part="DS18S20" description="High-Precision 1-Wire Digital Thermometer TO-92"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="OneWire 1Wire Maxim Dallas"/>
       <property name="ki_fp_filters" value="TO*92*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -809,7 +809,7 @@
       </fields>
       <libsource lib="PCM_Espressif" part="ESP32-DevKitC" description="Development Kit"/>
       <property name="Sheetname" value="Stammblatt"/>
-      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="Sheetfile" value="PoolDosingController.kicad_sch"/>
       <property name="ki_keywords" value="ESP32"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>190f4d84-01dd-4035-af91-add26f80895c</tstamps>

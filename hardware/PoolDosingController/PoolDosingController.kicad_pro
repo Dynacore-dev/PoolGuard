@@ -527,7 +527,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Dosieranlage.kicad_pro",
+    "filename": "PoolDosingController.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -553,7 +553,7 @@
       },
       {
         "clearance": 0.2,
-        "name": "Pumpenausgaenge",
+        "name": "PumpOutputs",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -564,7 +564,7 @@
       },
       {
         "clearance": 0.2,
-        "name": "Versorgung_12V",
+        "name": "Supply_12V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -575,7 +575,7 @@
       },
       {
         "clearance": 0.2,
-        "name": "Versorgung_Logik",
+        "name": "Supply_Logic",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -593,38 +593,38 @@
     "netclass_patterns": [
       {
         "netclass": "Default",
-        "pattern": "Poolpumpe_eingang"
+        "pattern": "PoolPump_input"
       },
       {
-        "netclass": "Versorgung_12V",
+        "netclass": "Supply_12V",
         "pattern": "GND"
       },
       {
-        "netclass": "Pumpenausgaenge",
+        "netclass": "PumpOutputs",
         "pattern": "Net-(D2-A)"
       },
       {
-        "netclass": "Pumpenausgaenge",
+        "netclass": "PumpOutputs",
         "pattern": "Net-(D3-A)"
       },
       {
-        "netclass": "Pumpenausgaenge",
+        "netclass": "PumpOutputs",
         "pattern": "Net-(D4-A)"
       },
       {
-        "netclass": "Pumpenausgaenge",
+        "netclass": "PumpOutputs",
         "pattern": "Net-(D5-A)"
       },
       {
-        "netclass": "Versorgung_12V",
+        "netclass": "Supply_12V",
         "pattern": "+12V"
       },
       {
-        "netclass": "Versorgung_Logik",
+        "netclass": "Supply_Logic",
         "pattern": "+5V"
       },
       {
-        "netclass": "Versorgung_Logik",
+        "netclass": "Supply_Logic",
         "pattern": "+3.3V"
       }
     ]
@@ -649,7 +649,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "../../../elektronik/Dosieranlage-Stückliste.csv",
+    "bom_export_filename": "PoolDosingController-BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -786,7 +786,7 @@
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": "Dosieranlage.wbk"
+      "workbook_filename": "PoolDosingController.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
@@ -802,8 +802,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Dosieranlage.kicad_sch",
-        "name": "Dosieranlage",
+        "filename": "PoolDosingController.kicad_sch",
+        "name": "PoolDosingController",
         "uuid": "b7d2e729-856c-4327-a617-477ea9523365"
       }
     ],
@@ -813,7 +813,7 @@
   "sheets": [
     [
       "b7d2e729-856c-4327-a617-477ea9523365",
-      "Dosieranlage"
+      "PoolDosingController"
     ]
   ],
   "text_variables": {},
