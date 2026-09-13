@@ -1,0 +1,17 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description,Packung,LCSC_Alt_0402
+C1,1,0.33uF,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,,,,smt,"Unpolarized capacitor, Generic Symbol, Alternate KiCad Library",1206_3216,
+"C2, C3",2,0.1uF,C_0805_2012Metric,,,,smt,"SMD 0805 MLCC capacitor, Alternate KiCad Library",0805/2012,"C1525 (Samsung CL05B104KO5NNNC, 0402, 100nF 16V X7R, Basic)"
+"C4, C5, C6",3,10uF,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,,,,smt,"Unpolarized capacitor, Generic Symbol, Alternate KiCad Library",,
+D1,1,1N4001,D_DO-41_SOD81_P7.62mm_Horizontal,,,,tht,"DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library",,
+"D2, D3, D4, D5",4,SS16,D_SMA,,,,smt,"60V 1A Schottky Diode, SMA",,
+J1,1,Screw_Terminal_01x03,TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal,,,,tht,"Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",,
+J2,1,Screw_Terminal_2_P5.00mm,"TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal",,,,tht,,,
+J3,1,Screw_Terminal_4_P5.00mm,"TerminalBlock_Phoenix_PT-1,5-8-5.0-H_1x08_P5.00mm_Horizontal",,,,tht,,,
+"Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8",8,MMBT3904,SOT-23,,,,smt,"NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library",,
+"Q10, Q11, Q12, Q9",4,IRFZ44N,TO-220-3_Vertical_GDS,,,,tht,"TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library",,
+R1,1,2.2K,R_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,,,smt,Resistor,,
+"R10, R11, R12, R13, R6, R7, R8, R9",8,10K,R_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,,,smt,Resistor,,
+"R2, R3, R4, R5",4,220,R_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,,,smt,Resistor,,
+U1,1,LM7805S,TO-263-3_TabPin2,,L7805ABD2T-TR,,smt,"SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library",,
+U2,1,DS18S20,TO-92_Inline,,DS18S20+,,tht,High-Precision 1-Wire Digital Thermometer TO-92,,
+U3,1,ESP32-DevKitC,ESP32-DevKitC,,ESP32-DEVKITC-32E,,tht,Development Kit,,
