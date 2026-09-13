@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/dynacore/cad/KiCad/Dosieranlage/Dosieranlage.kicad_sch</source>
+    <date>2025-10-24T17:47:36+0200</date>
+    <tool>Eeschema 9.0.3+dfsg-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Dosieranlage.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0,33uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Unpolarized capacitor, Generic Symbol, Alternate KiCad Library</description>
+      <fields>
+        <field name="Packung">1206_3216</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor, Generic Symbol, Alternate KiCad Library</field>
+      </fields>
+      <libsource lib="PCM_Capacitor_AKL" part="C_Generic" description="Unpolarized capacitor, Generic Symbol, Alternate KiCad Library"/>
+      <property name="Packung" value="1206_3216"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor generic"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a365f5bf-5019-4809-a676-2874b7c52d76</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0,1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>SMD 0805 2012 MLCC capacitor, Alternate KiCad Library</description>
+      <fields>
+        <field name="Packung ">0805/2012</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">SMD 0805 2012 MLCC capacitor, Alternate KiCad Library</field>
+      </fields>
+      <libsource lib="PCM_Capacitor_US_AKL" part="C_0805" description="SMD 0805 MLCC capacitor, Alternate KiCad Library"/>
+      <property name="Packung " value="0805/2012"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor ceramic chip mlcc smd 0805"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0853ec6c-0301-495c-a7bf-6501780028fb</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N4001</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>https://www.tme.eu/Document/5f8ffc5ac30fc86bac97d66040bf5502/1n400x.pdf</datasheet>
+      <description>DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library</description>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SOD-123F</field>
+        <field name="Datasheet">https://www.tme.eu/Document/5f8ffc5ac30fc86bac97d66040bf5502/1n400x.pdf</field>
+        <field name="Description">DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library</field>
+      </fields>
+      <libsource lib="PCM_Diode_AKL" part="1N4001" description="DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="diode 1N4001 DO41"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fdc7f797-d5fd-42f0-8de4-1286ce438f40</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>SS16</value>
+      <footprint>Diode_SMD:D_SMA_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/88746/ss12.pdf</datasheet>
+      <description>60V 1A Schottky Diode, SMA</description>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SMA_Handsoldering</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description">60V 1A Schottky Diode, SMA</field>
+      </fields>
+      <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="D*SMA*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5eb095ff-d204-4e66-a222-dc96d19c52fc</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>SS16</value>
+      <footprint>Diode_SMD:D_SMA_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/88746/ss12.pdf</datasheet>
+      <description>60V 1A Schottky Diode, SMA</description>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SMA_Handsoldering</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description">60V 1A Schottky Diode, SMA</field>
+      </fields>
+      <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="D*SMA*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>126e1fc7-c385-40c2-9456-92fb655c3f99</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>SS16</value>
+      <footprint>Diode_SMD:D_SMA_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/88746/ss12.pdf</datasheet>
+      <description>60V 1A Schottky Diode, SMA</description>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SMA_Handsoldering</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description">60V 1A Schottky Diode, SMA</field>
+      </fields>
+      <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="D*SMA*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab7ac9c8-c93c-4ee3-ba5f-87757506bb0c</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>SS16</value>
+      <footprint>Diode_SMD:D_SMA_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/88746/ss12.pdf</datasheet>
+      <description>60V 1A Schottky Diode, SMA</description>
+      <fields>
+        <field name="Footprint">Diode_SMD:D_SMA_Handsoldering</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description">60V 1A Schottky Diode, SMA</field>
+      </fields>
+      <libsource lib="Diode" part="SS16" description="60V 1A Schottky Diode, SMA"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="D*SMA*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5dc193d-a498-42e5-839e-d541ba2972a2</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>JST_05</value>
+      <footprint>Connector_JST:JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical</footprint>
+      <description>JST Connector  5 pins</description>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">JST Connector  5 pins</field>
+      </fields>
+      <libsource lib="PCM_SL_Connectors" part="JST_05" description="JST Connector  5 pins"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="JST"/>
+      <property name="ki_fp_filters" value="Connector_JST:JST_EH_S5B-EH_1x05_P2.50mm_Horizontal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2967e21-1760-4539-8eab-5cb95f5b6b3f</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Screw_Terminal_01x03</value>
+      <footprint>TerminalBlock:TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Footprint">TerminalBlock:TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <property name="ki_fp_filters" value="TerminalBlock*:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2808062a-858c-4f97-9deb-c33e19629c94</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>PINHD_1x6_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <description>Pin Header male with pin space 2.54mm. Pin Count -6</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin Header male with pin space 2.54mm. Pin Count -6</field>
+      </fields>
+      <libsource lib="PCM_SL_Pin_Headers" part="PINHD_1x6_Male" description="Pin Header male with pin space 2.54mm. Pin Count -6"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="Pin Header"/>
+      <property name="ki_fp_filters" value="PinHeader_1x06_P2.54mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1254b9ac-b7e2-4322-95fa-1c36f3d06f59</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>PINHD_1x19_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical</footprint>
+      <description>Pin Header female with pin space 2.54mm. Pin Count - 19</description>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin Header female with pin space 2.54mm. Pin Count - 19</field>
+      </fields>
+      <libsource lib="PCM_SL_Pin_Headers" part="PINHD_1x19_Female" description="Pin Header female with pin space 2.54mm. Pin Count - 19"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="Pin Header"/>
+      <property name="ki_fp_filters" value="PinSocket_1x19_P2.54mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f085cb4-9170-4763-bc0e-9807a46614ab</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>Screw_Terminal_2_P5.00mm</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_2_P5.00mm" description=""/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="Screw Terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>84a419ef-e381-4145-beb3-0b44db685383</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>Screw_Terminal_4_P5.00mm</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-5.0-H_1x08_P5.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-5.0-H_1x08_P5.00mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_8_P5.00mm" description=""/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4b90bb8-e644-4dc9-b625-6786d8630f08</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e561952-dbd1-461d-858a-9702a7e9522f</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e5285ce-7c4b-4fae-81b3-1ab72f487a9a</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>063f3096-2c84-4c54-952a-e71f1b860b35</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>90d80c9a-bff7-4545-baf2-db8b749d2d92</tstamps>
+    </comp>
+    <comp ref="Q5">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>05fda17c-13b7-4e23-961c-291f979ef288</tstamps>
+    </comp>
+    <comp ref="Q6">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d446116-722f-4252-bc40-206f65adc21e</tstamps>
+    </comp>
+    <comp ref="Q7">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>875cc775-c0f1-41d1-99c6-742d01ac7758</tstamps>
+    </comp>
+    <comp ref="Q8">
+      <value>MMBT3904</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</footprint>
+      <datasheet>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</datasheet>
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23_Handsoldering</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_BJT_AKL" part="MMBT3904" description="NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="transistor NPN 2N3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5cce288-65e1-4375-a5c6-636c96f758f3</tstamps>
+    </comp>
+    <comp ref="Q9">
+      <value>IRFZ44N</value>
+      <footprint>PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</footprint>
+      <datasheet>https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</datasheet>
+      <description>TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</field>
+        <field name="Datasheet">https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</field>
+        <field name="Description">TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b019dd20-899b-4f19-af63-620bdae8850f</tstamps>
+    </comp>
+    <comp ref="Q10">
+      <value>IRFZ44N</value>
+      <footprint>PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</footprint>
+      <datasheet>https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</datasheet>
+      <description>TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</field>
+        <field name="Datasheet">https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</field>
+        <field name="Description">TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>483ce31b-3522-4005-9265-536ab14f4aa8</tstamps>
+    </comp>
+    <comp ref="Q11">
+      <value>IRFZ44N</value>
+      <footprint>PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</footprint>
+      <datasheet>https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</datasheet>
+      <description>TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</field>
+        <field name="Datasheet">https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</field>
+        <field name="Description">TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0180e491-3d21-42d0-897f-a159d7df2352</tstamps>
+    </comp>
+    <comp ref="Q12">
+      <value>IRFZ44N</value>
+      <footprint>PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</footprint>
+      <datasheet>https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</datasheet>
+      <description>TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</field>
+        <field name="Datasheet">https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</field>
+        <field name="Description">TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</field>
+      </fields>
+      <libsource lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N" description="TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet IRFZ44N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61c24d47-e329-4f98-8d3d-1a57a09683d1</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ffddc7ea-6a64-48cc-b9f3-007c310e99cc</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0b67a3e-df0a-4f55-9664-04dafb2de841</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>007854fc-04ba-475f-b735-326e3b42222a</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4c9fc4d4-57c4-46d8-bd40-5f1a05e45d36</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>2.2K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc6b4bcd-9c3c-4437-84c5-859bcec6510a</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>220</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3c6d318-d587-43e9-acb7-9f2dc456194d</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>220</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>654ce23e-6795-4419-9af0-f4dd5db99ce9</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>220</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b23d6a10-41b8-4180-91e6-cf68f39e5c65</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>220</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c8a9614-dabe-4bc0-9e90-7386e62d85b2</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e3c9d0a-34d0-4bf4-911c-f7dbf31f64e4</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d371d028-930a-422b-ab0a-614f55c1d5e6</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>980419b5-2dab-47c9-b473-465fc7f348a7</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65f2bbec-64d0-480a-86b7-6d5814307815</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ccdc9d1a-91ef-465a-8e72-c11568302167</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>251af0cc-5014-4149-a4d6-f62a76d25625</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>87dde49c-d1ba-4c06-8e23-fe4f04fa1db4</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>10K</value>
+      <footprint>PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">PCM_Resistor_SMD_AKL:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>592a4387-8525-426b-8776-0db86ff93f7e</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>LM7805S</value>
+      <footprint>PCM_Package_TO_SOT_SMD_AKL:TO-263-3_TabPin2</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/lm340.pdf</datasheet>
+      <description>SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library</description>
+      <fields>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:TO-263-3_TabPin2</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/lm340.pdf</field>
+        <field name="Description">SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library</field>
+      </fields>
+      <libsource lib="PCM_Voltage_Regulator_AKL" part="LM7805S" description="SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="7805 5V 1.5A voltage regulator vreg pmic power supply 3-terminal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f545f6a1-55db-4b9d-b2de-b53d3b8d60f5</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>DS18S20</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
+      <datasheet>http://datasheets.maximintegrated.com/en/ds/DS18S20.pdf</datasheet>
+      <description>High-Precision 1-Wire Digital Thermometer TO-92</description>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://datasheets.maximintegrated.com/en/ds/DS18S20.pdf</field>
+        <field name="Description">High-Precision 1-Wire Digital Thermometer TO-92</field>
+      </fields>
+      <libsource lib="Sensor_Temperature" part="DS18S20" description="High-Precision 1-Wire Digital Thermometer TO-92"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="OneWire 1Wire Maxim Dallas"/>
+      <property name="ki_fp_filters" value="TO*92*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a39a881-2e83-4837-8266-130efcb3bdea</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>ESP32-DevKitC</value>
+      <footprint>PCM_Espressif:ESP32-DevKitC</footprint>
+      <datasheet>https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html</datasheet>
+      <description>Development Kit</description>
+      <fields>
+        <field name="Footprint">PCM_Espressif:ESP32-DevKitC</field>
+        <field name="Datasheet">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html</field>
+        <field name="Description">Development Kit</field>
+      </fields>
+      <libsource lib="PCM_Espressif" part="ESP32-DevKitC" description="Development Kit"/>
+      <property name="Sheetname" value="Stammblatt"/>
+      <property name="Sheetfile" value="Dosieranlage.kicad_sch"/>
+      <property name="ki_keywords" value="ESP32"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>190f4d84-01dd-4035-af91-add26f80895c</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="SS16">
+      <description>60V 1A Schottky Diode, SMA</description>
+      <docs>https://www.vishay.com/docs/88746/ss12.pdf</docs>
+      <footprints>
+        <fp>D*SMA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS16</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88746/ss12.pdf</field>
+        <field name="Description">60V 1A Schottky Diode, SMA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Capacitor_AKL" part="C_Generic">
+      <description>Unpolarized capacitor, Generic Symbol, Alternate KiCad Library</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Generic</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor, Generic Symbol, Alternate KiCad Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Capacitor_US_AKL" part="C_0805">
+      <description>SMD 0805 MLCC capacitor, Alternate KiCad Library</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_0805</field>
+        <field name="Footprint">PCM_Capacitor_SMD_AKL:C_0805_2012Metric</field>
+        <field name="Datasheet">~</field>
+        <field name="Description">SMD 0805 MLCC capacitor, Alternate KiCad Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Diode_AKL" part="1N4001">
+      <description>DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library</description>
+      <docs>https://www.tme.eu/Document/5f8ffc5ac30fc86bac97d66040bf5502/1n400x.pdf</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">PCM_Diode_THT_AKL:D_DO-41_SOD81_P7.62mm_Horizontal</field>
+        <field name="Datasheet">https://www.tme.eu/Document/5f8ffc5ac30fc86bac97d66040bf5502/1n400x.pdf</field>
+        <field name="Description">DO-41 Diode, Rectifier, 50V 1A, Alternate KiCad Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Espressif" part="ESP32-DevKitC">
+      <description>Development Kit</description>
+      <docs>https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-DevKitC</field>
+        <field name="Footprint">PCM_Espressif:ESP32-DevKitC</field>
+        <field name="Datasheet">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html</field>
+        <field name="Description">Development Kit</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="CHIP_PU" type="input"/>
+        <pin num="3" name="SENSOR_VP/GPIO36/ADC1_CH0" type="input"/>
+        <pin num="4" name="SENSOR_VN/GPIO39/ADC1_CH3" type="input"/>
+        <pin num="5" name="VDET_1/GPIO34/ADC1_CH6" type="input"/>
+        <pin num="6" name="VDET_2/GPIO35/ADC1_CH7" type="input"/>
+        <pin num="7" name="32K_XP/GPIO32/ADC1_CH4" type="bidirectional"/>
+        <pin num="8" name="32K_XN/GPIO33/ADC1_CH5" type="bidirectional"/>
+        <pin num="9" name="DAC_1/ADC2_CH8/GPIO25" type="bidirectional"/>
+        <pin num="10" name="DAC_2/ADC2_CH9/GPIO26" type="bidirectional"/>
+        <pin num="11" name="ADC2_CH7/GPIO27" type="bidirectional"/>
+        <pin num="12" name="MTMS/GPIO14/ADC2_CH6" type="bidirectional"/>
+        <pin num="13" name="MTDI/GPIO12/ADC2_CH5" type="bidirectional"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="MTCK/GPIO13/ADC2_CH4" type="bidirectional"/>
+        <pin num="16" name="SD_DATA2/GPIO9" type="bidirectional"/>
+        <pin num="17" name="SD_DATA3/GPIO10" type="bidirectional"/>
+        <pin num="18" name="CMD" type="bidirectional"/>
+        <pin num="19" name="5V" type="power_in"/>
+        <pin num="20" name="SD_CLK/GPIO6" type="bidirectional"/>
+        <pin num="21" name="SD_DATA0/GPIO7" type="bidirectional"/>
+        <pin num="22" name="SD_DATA1/GPIO8" type="bidirectional"/>
+        <pin num="23" name="MTDO/GPIO15/ADC2_CH3" type="bidirectional"/>
+        <pin num="24" name="ADC2_CH2/GPIO2" type="bidirectional"/>
+        <pin num="25" name="GPIO0/BOOT/ADC2_CH1" type="bidirectional"/>
+        <pin num="26" name="ADC2_CH0/GPIO4" type="bidirectional"/>
+        <pin num="27" name="GPIO16" type="bidirectional"/>
+        <pin num="28" name="GPIO17" type="bidirectional"/>
+        <pin num="29" name="GPIO5" type="bidirectional"/>
+        <pin num="30" name="GPIO18" type="bidirectional"/>
+        <pin num="31" name="GPIO19" type="bidirectional"/>
+        <pin num="32" name="GND" type="passive"/>
+        <pin num="33" name="GPIO21" type="bidirectional"/>
+        <pin num="34" name="U0RXD/GPIO3" type="bidirectional"/>
+        <pin num="35" name="U0TXD/GPIO1" type="bidirectional"/>
+        <pin num="36" name="GPIO22" type="bidirectional"/>
+        <pin num="37" name="GPIO23" type="bidirectional"/>
+        <pin num="38" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_SL_Connectors" part="JST_05">
+      <description>JST Connector  5 pins</description>
+      <footprints>
+        <fp>Connector_JST:JST_EH_S5B-EH_1x05_P2.50mm_Horizontal</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">JST_05</field>
+        <field name="Footprint">Connector_JST:JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">JST Connector  5 pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_SL_Pin_Headers" part="PINHD_1x19_Female">
+      <description>Pin Header female with pin space 2.54mm. Pin Count - 19</description>
+      <footprints>
+        <fp>PinSocket_1x19_P2.54mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PINHD_1x19_Female</field>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin Header female with pin space 2.54mm. Pin Count - 19</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+        <pin num="7" name="" type="passive"/>
+        <pin num="8" name="" type="passive"/>
+        <pin num="9" name="" type="passive"/>
+        <pin num="10" name="" type="passive"/>
+        <pin num="11" name="" type="passive"/>
+        <pin num="12" name="" type="passive"/>
+        <pin num="13" name="" type="passive"/>
+        <pin num="14" name="" type="passive"/>
+        <pin num="15" name="" type="passive"/>
+        <pin num="16" name="" type="passive"/>
+        <pin num="17" name="" type="passive"/>
+        <pin num="18" name="" type="passive"/>
+        <pin num="19" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_SL_Pin_Headers" part="PINHD_1x6_Male">
+      <description>Pin Header male with pin space 2.54mm. Pin Count -6</description>
+      <footprints>
+        <fp>PinHeader_1x06_P2.54mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PINHD_1x6_Male</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin Header male with pin space 2.54mm. Pin Count -6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_2_P5.00mm">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_2_P5.00mm</field>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_SL_Screw_Terminal" part="Screw_Terminal_8_P5.00mm">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_8_P5.00mm</field>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-5.0-H_1x08_P5.00mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+        <pin num="7" name="" type="passive"/>
+        <pin num="8" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Transistor_BJT_AKL" part="MMBT3904">
+      <description>NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</description>
+      <docs>https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBT3904</field>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:SOT-23</field>
+        <field name="Datasheet">https://www.tme.eu/Document/12bff749841e3a356e683e9a8e7e4119/2N3904BU-DTE.pdf</field>
+        <field name="Description">NPN SOT-23 transistor, 40V, 200mA, 350mW, Complementary to MMBT3906, Alternate KiCAD Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Transistor_MOSFET_AKL" part="IRFZ44N">
+      <description>TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</description>
+      <docs>https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRFZ44N</field>
+        <field name="Footprint">PCM_Package_TO_SOT_THT_AKL:TO-220-3_Vertical_GDS</field>
+        <field name="Datasheet">https://www.tme.eu/Document/057c54506cb7c07cd36d9e96d4a41c5b/irfz44n.pdf</field>
+        <field name="Description">TO-220 N-MOSFET enchancement mode transistor, 55V, 49A, 94W, Alternate KiCAD Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_Voltage_Regulator_AKL" part="LM7805S">
+      <description>SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library</description>
+      <docs>https://www.ti.com/lit/ds/symlink/lm340.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805S</field>
+        <field name="Footprint">PCM_Package_TO_SOT_SMD_AKL:TO-263-3_TabPin2</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/lm340.pdf</field>
+        <field name="Description">SOT-263 5V 1.5A 3-terminal voltage regulator, Alternate KiCad Library</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Temperature" part="DS18S20">
+      <description>High-Precision 1-Wire Digital Thermometer TO-92</description>
+      <docs>http://datasheets.maximintegrated.com/en/ds/DS18S20.pdf</docs>
+      <footprints>
+        <fp>TO*92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DS18S20</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://datasheets.maximintegrated.com/en/ds/DS18S20.pdf</field>
+        <field name="Description">High-Precision 1-Wire Digital Thermometer TO-92</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="DQ" type="bidirectional"/>
+        <pin num="3" name="V_{DD}" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/usr/share/kicad/symbols//Diode.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Capacitor_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Capacitor_AKL.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Capacitor_US_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Capacitor_US_AKL.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Diode_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Diode_AKL.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Espressif">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_espressif_kicad-libraries/Espressif.kicad_sym</uri>
+    </library>
+    <library logical="PCM_SL_Connectors">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/SL_Connectors.kicad_sym</uri>
+    </library>
+    <library logical="PCM_SL_Pin_Headers">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/SL_Pin_Headers.kicad_sym</uri>
+    </library>
+    <library logical="PCM_SL_Screw_Terminal">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/SL_Screw_Terminal.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Transistor_BJT_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Transistor_BJT_AKL.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Transistor_MOSFET_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Transistor_MOSFET_AKL.kicad_sym</uri>
+    </library>
+    <library logical="PCM_Voltage_Regulator_AKL">
+      <uri>/home/dynacore/.local/share/kicad/9.0/3rdparty//symbols/com_github_dawidcislo_alternate-kicad-library/Voltage_Regulator_AKL.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Temperature">
+      <uri>/usr/share/kicad/symbols//Sensor_Temperature.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V" class="Default">
+      <node ref="J1" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="5" pintype="passive"/>
+      <node ref="J4" pin="19" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="V_{DD}" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="3V3" pintype="power_in"/>
+    </net>
+    <net code="2" name="+5V" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U3" pin="19" pinfunction="5V" pintype="power_in"/>
+    </net>
+    <net code="3" name="+12V" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J5" pin="2" pintype="passive"/>
+      <node ref="J6" pin="5" pintype="passive"/>
+      <node ref="J6" pin="6" pintype="passive"/>
+      <node ref="J6" pin="7" pintype="passive"/>
+      <node ref="J6" pin="8" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="IN" pintype="power_in"/>
+    </net>
+    <net code="4" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="6" pintype="passive"/>
+      <node ref="J4" pin="6" pintype="passive"/>
+      <node ref="J5" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q10" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="Q11" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="Q12" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q5" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q6" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q7" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q8" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q9" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="32" pinfunction="GND" pintype="passive"/>
+      <node ref="U3" pin="38" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(D2-A)" class="Default">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J6" pin="4" pintype="passive"/>
+      <node ref="Q9" pin="2" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="6" name="Net-(D3-A)" class="Default">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J6" pin="3" pintype="passive"/>
+      <node ref="Q10" pin="2" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="7" name="Net-(D4-A)" class="Default">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J6" pin="2" pintype="passive"/>
+      <node ref="Q11" pin="2" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(D5-A)" class="Default">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J6" pin="1" pintype="passive"/>
+      <node ref="Q12" pin="2" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(J2-Pin_2)" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="DQ" pintype="bidirectional"/>
+      <node ref="U3" pin="11" pinfunction="ADC2_CH7/GPIO27" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="Net-(Q1-B)" class="Default">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(Q1-C)" class="Default">
+      <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q5" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(Q2-B)" class="Default">
+      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(Q2-C)" class="Default">
+      <node ref="Q2" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q6" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(Q3-B)" class="Default">
+      <node ref="Q3" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(Q3-C)" class="Default">
+      <node ref="Q3" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q7" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(Q4-B)" class="Default">
+      <node ref="Q4" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(Q4-C)" class="Default">
+      <node ref="Q4" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q8" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(Q5-C)" class="Default">
+      <node ref="Q5" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q9" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(Q10-G)" class="Default">
+      <node ref="Q10" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q6" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(Q11-G)" class="Default">
+      <node ref="Q11" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q7" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(Q12-G)" class="Default">
+      <node ref="Q12" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q8" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(U3-32K_XN/GPIO33/ADC1_CH5)" class="Default">
+      <node ref="J4" pin="12" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="32K_XN/GPIO33/ADC1_CH5" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="Net-(U3-32K_XP/GPIO32/ADC1_CH4)" class="Default">
+      <node ref="J4" pin="13" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="32K_XP/GPIO32/ADC1_CH4" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="Net-(U3-DAC_1/ADC2_CH8/GPIO25)" class="Default">
+      <node ref="J4" pin="11" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="DAC_1/ADC2_CH8/GPIO25" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="Net-(U3-DAC_2/ADC2_CH9/GPIO26)" class="Default">
+      <node ref="J4" pin="10" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U3" pin="10" pinfunction="DAC_2/ADC2_CH9/GPIO26" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="Net-(U3-GPIO5)" class="Default">
+      <node ref="J3" pin="1" pintype="passive"/>
+      <node ref="U3" pin="29" pinfunction="GPIO5" pintype="bidirectional"/>
+    </net>
+    <net code="27" name="Net-(U3-GPIO18)" class="Default">
+      <node ref="J3" pin="2" pintype="passive"/>
+      <node ref="U3" pin="30" pinfunction="GPIO18" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="Net-(U3-GPIO19)" class="Default">
+      <node ref="J3" pin="4" pintype="passive"/>
+      <node ref="U3" pin="31" pinfunction="GPIO19" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="Net-(U3-GPIO23)" class="Default">
+      <node ref="J3" pin="3" pintype="passive"/>
+      <node ref="U3" pin="37" pinfunction="GPIO23" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="Net-(U3-MTDI/GPIO12/ADC2_CH5)" class="Default">
+      <node ref="J1" pin="5" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="MTDI/GPIO12/ADC2_CH5" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="Net-(U3-MTMS/GPIO14/ADC2_CH6)" class="Default">
+      <node ref="J1" pin="4" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="MTMS/GPIO14/ADC2_CH6" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="Net-(U3-VDET_1/GPIO34/ADC1_CH6)" class="Default">
+      <node ref="J1" pin="2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="VDET_1/GPIO34/ADC1_CH6" pintype="input"/>
+    </net>
+    <net code="33" name="Net-(U3-VDET_2/GPIO35/ADC1_CH7)" class="Default">
+      <node ref="J1" pin="3" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="VDET_2/GPIO35/ADC1_CH7" pintype="input"/>
+    </net>
+    <net code="34" name="unconnected-(J4-Pad2)" class="Default">
+      <node ref="J4" pin="2" pintype="passive"/>
+    </net>
+    <net code="35" name="unconnected-(J4-Pad3)" class="Default">
+      <node ref="J4" pin="3" pintype="passive"/>
+    </net>
+    <net code="36" name="unconnected-(J4-Pad4)" class="Default">
+      <node ref="J4" pin="4" pintype="passive"/>
+    </net>
+    <net code="37" name="unconnected-(J4-Pad5)" class="Default">
+      <node ref="J4" pin="5" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(J4-Pad7)" class="Default">
+      <node ref="J4" pin="7" pintype="passive"/>
+    </net>
+    <net code="39" name="unconnected-(J4-Pad8)" class="Default">
+      <node ref="J4" pin="8" pintype="passive"/>
+    </net>
+    <net code="40" name="unconnected-(J4-Pad9)" class="Default">
+      <node ref="J4" pin="9" pintype="passive"/>
+    </net>
+    <net code="41" name="unconnected-(J4-Pad14)" class="Default">
+      <node ref="J4" pin="14" pintype="passive"/>
+    </net>
+    <net code="42" name="unconnected-(J4-Pad15)" class="Default">
+      <node ref="J4" pin="15" pintype="passive"/>
+    </net>
+    <net code="43" name="unconnected-(J4-Pad16)" class="Default">
+      <node ref="J4" pin="16" pintype="passive"/>
+    </net>
+    <net code="44" name="unconnected-(J4-Pad17)" class="Default">
+      <node ref="J4" pin="17" pintype="passive"/>
+    </net>
+    <net code="45" name="unconnected-(J4-Pad18)" class="Default">
+      <node ref="J4" pin="18" pintype="passive"/>
+    </net>
+    <net code="46" name="unconnected-(U3-ADC2_CH0/GPIO4-Pad26)" class="Default">
+      <node ref="U3" pin="26" pinfunction="ADC2_CH0/GPIO4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U3-ADC2_CH2/GPIO2-Pad24)" class="Default">
+      <node ref="U3" pin="24" pinfunction="ADC2_CH2/GPIO2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U3-CHIP_PU-Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="CHIP_PU" pintype="input+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U3-CMD-Pad18)" class="Default">
+      <node ref="U3" pin="18" pinfunction="CMD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U3-GPIO0/BOOT/ADC2_CH1-Pad25)" class="Default">
+      <node ref="U3" pin="25" pinfunction="GPIO0/BOOT/ADC2_CH1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U3-GPIO16-Pad27)" class="Default">
+      <node ref="U3" pin="27" pinfunction="GPIO16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U3-GPIO17-Pad28)" class="Default">
+      <node ref="U3" pin="28" pinfunction="GPIO17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U3-GPIO21-Pad33)" class="Default">
+      <node ref="U3" pin="33" pinfunction="GPIO21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U3-GPIO22-Pad36)" class="Default">
+      <node ref="U3" pin="36" pinfunction="GPIO22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U3-MTCK/GPIO13/ADC2_CH4-Pad15)" class="Default">
+      <node ref="U3" pin="15" pinfunction="MTCK/GPIO13/ADC2_CH4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U3-MTDO/GPIO15/ADC2_CH3-Pad23)" class="Default">
+      <node ref="U3" pin="23" pinfunction="MTDO/GPIO15/ADC2_CH3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U3-SD_CLK/GPIO6-Pad20)" class="Default">
+      <node ref="U3" pin="20" pinfunction="SD_CLK/GPIO6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U3-SD_DATA0/GPIO7-Pad21)" class="Default">
+      <node ref="U3" pin="21" pinfunction="SD_DATA0/GPIO7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U3-SD_DATA1/GPIO8-Pad22)" class="Default">
+      <node ref="U3" pin="22" pinfunction="SD_DATA1/GPIO8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U3-SD_DATA2/GPIO9-Pad16)" class="Default">
+      <node ref="U3" pin="16" pinfunction="SD_DATA2/GPIO9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U3-SD_DATA3/GPIO10-Pad17)" class="Default">
+      <node ref="U3" pin="17" pinfunction="SD_DATA3/GPIO10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U3-SENSOR_VN/GPIO39/ADC1_CH3-Pad4)" class="Default">
+      <node ref="U3" pin="4" pinfunction="SENSOR_VN/GPIO39/ADC1_CH3" pintype="input+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U3-SENSOR_VP/GPIO36/ADC1_CH0-Pad3)" class="Default">
+      <node ref="U3" pin="3" pinfunction="SENSOR_VP/GPIO36/ADC1_CH0" pintype="input+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U3-U0RXD/GPIO3-Pad34)" class="Default">
+      <node ref="U3" pin="34" pinfunction="U0RXD/GPIO3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U3-U0TXD/GPIO1-Pad35)" class="Default">
+      <node ref="U3" pin="35" pinfunction="U0TXD/GPIO1" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

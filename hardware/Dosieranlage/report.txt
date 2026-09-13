@@ -1,0 +1,9 @@
++3.3V aktualisiert von #PWR02 auf #PWR01.
++12V aktualisiert von #PWR01 auf #PWR02.
+GND aktualisiert von #PWR04 auf #PWR03.
+GND aktualisiert von #PWR03 auf #PWR04.
++5V aktualisiert von #PWR06 auf #PWR05.
+GND aktualisiert von #PWR07 auf #PWR06.
++3.3V aktualisiert von #PWR08 auf #PWR07.
++5V aktualisiert von #PWR05 auf #PWR08.
+Annotation vollständig.
