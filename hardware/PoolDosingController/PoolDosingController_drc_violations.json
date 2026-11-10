@@ -1,0 +1,13 @@
+{
+  "board": "C:\\Users\\MarioKoren\\AppData\\Local\\Programs\\KiCad\\10.0\\PoolGuard\\hardware\\PoolDosingController\\PoolDosingController.kicad_pcb",
+  "timestamp": "2026-11-10T15:36:32",
+  "total_violations": 0,
+  "violation_counts": {},
+  "severity_counts": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "category_counts": {},
+  "violations": []
+}
